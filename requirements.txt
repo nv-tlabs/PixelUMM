@@ -1,0 +1,16 @@
+# PixelUMM training and inference runtime.
+#
+# Install the CUDA-specific PyTorch wheels first:
+#   python -m pip install -r requirements-torch-cu130.txt
+# Then install this file. Keeping the PyTorch index separate prevents pip from
+# searching the PyTorch wheel index for every ordinary Python package.
+
+imageio-ffmpeg==0.6.0
+einops==0.8.1
+numpy==2.1.0
+Pillow==11.3.0
+PyYAML==6.0.3
+safetensors==0.6.2
+tqdm==4.67.1
+torchcodec==0.16.0
+transformers==4.57.1

@@ -1,0 +1,5 @@
+# Public FlashAttention-2 CUDA inference kernel. This upstream commit fixes
+# PyTorch 2.14's C++20 extension requirement and CUDA 13 source build.
+# Keep the full immutable revision; the previous 2.7.4.post1 pin fails here.
+# Install with the documented build prerequisites and --no-build-isolation.
+flash-attn @ git+https://github.com/Dao-AILab/flash-attention.git@f87af617fab71c29c11e7f9bc74746ae7534a59d

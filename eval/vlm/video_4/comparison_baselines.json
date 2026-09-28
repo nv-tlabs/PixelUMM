@@ -1,0 +1,261 @@
+{
+  "schema_version": 2,
+  "description": "Published reference scores for the four F19 video benchmarks. Scores are percentages as reported by each score source; they are not reruns with the F19 input contract. Training and evaluation input fields distinguish measured settings, released defaults, and information that was not disclosed.",
+  "input_field_note": "Train frames/resolution describe the model's released training recipe, not its theoretical context capacity. Eval fields first report the setting tied to the displayed score. When that exact run is not disclosed, an official paper sweep or released-code default/example may be shown, but it is explicitly labelled and is not presented as the score-run setting. A token or pixel budget is shown when no fixed square resolution exists.",
+  "task_order": [
+    "mvbench",
+    "videomme",
+    "longvideobench_val_v",
+    "lvbench"
+  ],
+  "task_labels": {
+    "mvbench": "MVBench test",
+    "videomme": "Video-MME w/o sub",
+    "longvideobench_val_v": "LongVideoBench val",
+    "lvbench": "LVBench test"
+  },
+  "sources": {
+    "tuna": {
+      "label": "TUNA paper, Table 3",
+      "url": "https://arxiv.org/abs/2512.02014",
+      "local": "references/tuna-paper/2512.02014-source/tables/table_video_und.tex",
+      "protocol": "MVBench test; Video-MME without subtitles; LongVideoBench validation; LVBench test. The table's frame column is used except for VideoChat-Flash: its 16 is contradicted by the original paper and official scripts and is the model's average tokens per frame, not its input-frame count."
+    },
+    "qwen25vl": {
+      "label": "Qwen2.5-VL technical report, video results table",
+      "url": "https://arxiv.org/abs/2502.13923",
+      "local": "references/Qwen-VL-paper/2502.13923-source/content/experiments_video.tex",
+      "protocol": "MVBench; Video-MME without subtitles; LongVideoBench validation; LVBench. Evaluation uses at most 768 frames and 24,576 video tokens; native dynamic resolution has no single fixed H×W."
+    },
+    "videochat_flash": {
+      "label": "VideoChat-Flash paper and official train/eval scripts",
+      "url": "https://github.com/OpenGVLab/VideoChat-Flash",
+      "local": [
+        "references/VideoChat-Flash-paper/2501.00574-source/table/videoqa.tex",
+        "references/VideoChat-Flash/llava-train_videochat/README.md",
+        "references/VideoChat-Flash/lmms-eval_videochat/README.md"
+      ],
+      "protocol": "MVBench average; Video-MME overall without subtitles; LongVideoBench validation; LVBench average. Original Table 1 labels 16 as average tokens per frame. Official evaluation scripts use max 512 frames for MVBench, Video-MME and LongVideoBench, and max 640 for LVBench."
+    },
+    "llava_ov2": {
+      "label": "LLaVA-OneVision-2 paper, main video table",
+      "url": "https://arxiv.org/abs/2605.25979",
+      "local": [
+        "references/LLaVA-OneVision-paper/2605.25979-source/variable_theme_table.tex",
+        "references/LLaVA-OneVision-paper/2605.25979-source/content/evaluation.tex"
+      ],
+      "protocol": "Paper-reported standard benchmark scores using default prompts, identical decoding, and matched token budgets. The table does not state the LongVideoBench split, so those cells carry a dagger and are excluded from ranks."
+    },
+    "llava_video": {
+      "label": "LLaVA-Video paper, Table 2 and official eval recipe",
+      "url": "https://arxiv.org/abs/2410.02713",
+      "protocol": "Original zero-shot results: MVBench test, Video-MME overall without subtitles, and LongVideoBench validation; LVBench was not reported. Training and inference use the same maximum-64-frame representation. Official evaluation uses Qwen-1.5 chat formatting, a duration-and-frame-timestamp instruction, uniform full-video sampling, and greedy decoding (temperature 0). The 7B model spatially pools every frame by 2x2; the 72B model uses SlowFast-style token allocation, pooling every third frame by 2x2 and the remaining frames by 4x4."
+    },
+    "videochat3": {
+      "label": "VideoChat3 paper, main video table and official configs",
+      "url": "https://arxiv.org/abs/2607.14935",
+      "local": [
+        "references/VideoChat3-paper/2607.14935-source/Tables/Benchmark_Offline_Video_Results.tex",
+        "references/VideoChat3-paper/2607.14935-source/Tables/Ablations/Data_LV116K.tex",
+        "references/VideoChat3-paper/2607.14935-source/Tables/Appendix/eval_config_offline.tex",
+        "references/VideoChat3/vlmevalkit-videochat3/vlmeval/dataset/video_dataset_config.py",
+        "references/VideoChat3/vlmevalkit-videochat3/vlmeval/dataset/videomme.py",
+        "references/VideoChat3/xtuner-videochat3/training_configs"
+      ],
+      "protocol": "The final-model table reports Video-MME without subtitles (70.1) and LVBench test (56.7), using 2 FPS with maxima of 1,024 and 2,048 frames respectively at 448² pixels/frame and an 80K visual-token total. If 2 FPS exceeds the cap, official code uniformly samples the cap across the full duration and passes the resulting effective FPS to the model. LongVideoBench 64.2 is from the LV116K ablation and uses test, not PixelUMM's validation split; it carries a dagger and is excluded from ranks."
+    },
+    "lance": {
+      "label": "Lance paper, Table 8 and released configs",
+      "url": "https://lance-project.github.io/assets/lance.pdf",
+      "local": [
+        "references/Lance/README.md",
+        "references/Lance/scripts/sft_lance_understand.sh",
+        "references/Lance/config/train_local/multi_und.yaml"
+      ],
+      "protocol": "MVBench test average reported by the official Lance paper/project. Released training configs expose a 121-frame model cap and 616-base aspect-ratio buckets for understanding; the paper table does not state the MVBench evaluation frames or resolution."
+    },
+    "neo_ov": {
+      "label": "NEO-ov paper and released VLMEvalKit_ov scripts",
+      "url": "https://arxiv.org/abs/2605.28820",
+      "local": [
+        "references/NEO-paper/2605.28820-source/review.tex",
+        "references/NEO/VLMEvalKit_ov/eval_video_part1.sh",
+        "references/NEO/VLMEvalKit_ov/vlmeval/config.py"
+      ],
+      "protocol": "VLMEvalKit evaluation. Both sizes use Video-MME and LVBench at 1 FPS/max 256 and LongVideoBench validation at 256 frames. MVBench uses 64 frames for 2B and 32 for 9B. Video preprocessing is native-aspect with a 360×640 maximum pixel area."
+    }
+  },
+  "input_sources": {
+    "videomme": {"label": "Video-MME official protocol", "url": "https://arxiv.org/abs/2405.21075"},
+    "longva": {"label": "LongVA paper / official repo", "url": "https://github.com/EvolvingLMMs-Lab/LongVA"},
+    "videollama2": {"label": "VideoLLaMA2 paper / official repo", "url": "https://github.com/DAMO-NLP-SG/VideoLLaMA2"},
+    "llava_ov": {"label": "LLaVA-OneVision paper", "url": "https://arxiv.org/abs/2408.03326"},
+    "llava_video": {"label": "LLaVA-Video paper + official model/eval recipe", "url": "https://github.com/LLaVA-VL/LLaVA-NeXT/blob/main/docs/LLaVA_Video_1003.md"},
+    "showo2": {"label": "Show-o2 paper / official 1.5B config", "url": "https://github.com/showlab/Show-o"},
+    "tuna": {"label": "TUNA paper", "url": "https://arxiv.org/abs/2512.02014"},
+    "qwen25vl": {"label": "Qwen2.5-VL report", "url": "https://arxiv.org/abs/2502.13923"},
+    "videochat_flash": {"label": "VideoChat-Flash official scripts", "url": "https://github.com/OpenGVLab/VideoChat-Flash"},
+    "llava_ov2": {"label": "LLaVA-OneVision-2 paper / release", "url": "https://github.com/EvolvingLMMs-Lab/LLaVA-OneVision-2"},
+    "qwen3vl": {"label": "Qwen3-VL report / official repo", "url": "https://github.com/QwenLM/Qwen3-VL"},
+    "keye": {"label": "Keye-VL-1.5 report", "url": "https://arxiv.org/abs/2509.01563"},
+    "internvl35": {"label": "InternVL3.5 report", "url": "https://arxiv.org/abs/2508.18265"},
+    "plm": {"label": "PerceptionLM paper / configs", "url": "https://github.com/facebookresearch/perception_models/tree/main/apps/plm"},
+    "llava_ov15": {"label": "LLaVA-OneVision-1.5 report", "url": "https://arxiv.org/abs/2509.23661"},
+    "videochat3": {"label": "VideoChat3 paper + official train/eval code", "url": "https://github.com/MCG-NJU/VideoChat3"},
+    "lance": {"label": "Lance released configs", "url": "https://github.com/bytedance/Lance"},
+    "neo_ov": {"label": "NEO-ov paper / eval scripts", "url": "https://arxiv.org/abs/2605.28820"}
+  },
+  "rows": [
+    {
+      "model": "GPT-4o", "size": "—", "source_id": "tuna", "input_source_ids": ["videomme"],
+      "train_frames": "Proprietary; not disclosed", "train_resolution": "Proprietary; not disclosed",
+      "eval_frames": "Video-MME: 384; other shown tasks: not stated", "eval_resolution": "Video-MME: 512×512; other shown tasks: not stated",
+      "scores": {"videomme": 71.9, "longvideobench_val_v": 66.7, "lvbench": 48.9}
+    },
+    {
+      "model": "Gemini-1.5-Pro", "size": "—", "source_id": "tuna", "input_source_ids": ["videomme"],
+      "train_frames": "Proprietary; not disclosed", "train_resolution": "Proprietary; not disclosed",
+      "eval_frames": "Video-MME: 1 FPS short/medium, 0.5 FPS long; others: not stated", "eval_resolution": "Not stated by score/protocol sources",
+      "scores": {"mvbench": 54.2, "videomme": 75.0, "longvideobench_val_v": 64.0, "lvbench": 33.1}
+    },
+    {
+      "model": "LongVA", "size": "7B", "source_id": "tuna", "input_source_ids": ["longva"],
+      "train_frames": "No video training; long-context transfer is zero-shot", "train_resolution": "Vision-language alignment: 336×336",
+      "eval_frames": "Video-MME official duration row: 128; TUNA four-benchmark table: 64", "eval_resolution": "336×336",
+      "scores": {"mvbench": 49.2, "videomme": 52.6, "longvideobench_val_v": 51.8}
+    },
+    {
+      "model": "VideoLLaMA2", "size": "7B", "source_id": "tuna", "input_source_ids": ["videollama2"],
+      "train_frames": "8", "train_resolution": "336×336 (CLIP ViT-L/14)",
+      "eval_frames": "16 (displayed-score table)", "eval_resolution": "336×336",
+      "scores": {"mvbench": 54.6, "videomme": 47.9}
+    },
+    {
+      "model": "LLaVA-OneVision", "size": "7B", "source_id": "tuna", "input_source_ids": ["llava_ov"],
+      "train_frames": "≤32, uniform", "train_resolution": "384×384 per frame; aspect-preserving pad",
+      "eval_frames": "32", "eval_resolution": "384×384 per frame",
+      "scores": {"mvbench": 56.7, "videomme": 58.2, "longvideobench_val_v": 56.5, "lvbench": 26.9}
+    },
+    {
+      "model": "LLaVA-Video", "size": "7B", "source_id": "llava_video", "input_source_ids": ["llava_video"],
+      "train_frames": "≤64, uniformly sampled over the full clip; no fixed FPS", "train_resolution": "SigLIP 384×384; 2×2 spatial pool on every frame",
+      "eval_frames": "64, uniformly sampled over the full video (force_sample); no fixed FPS", "eval_resolution": "384×384 input; 2×2 spatial pool; same representation as training",
+      "scores": {"mvbench": 58.6, "videomme": 63.3, "longvideobench_val_v": 58.2}
+    },
+    {
+      "model": "LLaVA-Video", "size": "72B", "source_id": "llava_video", "input_source_ids": ["llava_video"],
+      "train_frames": "≤64, uniformly sampled over the full clip; no fixed FPS", "train_resolution": "SigLIP 384×384; SlowFast token pool: every 3rd frame 2×2, others 4×4",
+      "eval_frames": "64, uniformly sampled over the full video (force_sample); no fixed FPS", "eval_resolution": "384×384 input; same SlowFast representation as training",
+      "scores": {"mvbench": 64.1, "videomme": 70.5, "longvideobench_val_v": 61.9}
+    },
+    {
+      "model": "Show-o2", "size": "1.5B", "source_id": "tuna", "input_source_ids": ["showo2"],
+      "train_frames": "Understanding: ≤32; generation clips: 17 frames/2 s", "train_resolution": "Understanding config: 432×432; generation: 480p or 432²",
+      "eval_frames": "32, uniformly sampled over the full video", "eval_resolution": "432×432 (resize + pad)",
+      "scores": {"mvbench": 49.8, "videomme": 48.0, "longvideobench_val_v": 49.2}
+    },
+    {
+      "model": "TUNA", "size": "1.5B", "source_id": "tuna", "input_source_ids": ["tuna"],
+      "train_frames": "Video training used; fixed cap not reported", "train_resolution": "512×512 base + equal-token aspect-ratio buckets",
+      "eval_frames": "49", "eval_resolution": "Not stated for scores; model base is 512×512",
+      "scores": {"mvbench": 54.4, "videomme": 49.1, "longvideobench_val_v": 49.7, "lvbench": 27.4}
+    },
+    {
+      "model": "Qwen2.5-VL-72B", "size": "72B", "source_id": "qwen25vl", "input_source_ids": ["qwen25vl"],
+      "train_frames": "Dynamic FPS / length-adaptive; no single fixed cap", "train_resolution": "Native/dynamic; H,W multiples of 28",
+      "eval_frames": "≤768", "eval_resolution": "Native/dynamic; ≤24,576 video tokens total",
+      "scores": {"mvbench": 70.4, "videomme": 73.3, "longvideobench_val_v": 60.7, "lvbench": 47.3}
+    },
+    {
+      "model": "Qwen2.5-VL-7B", "size": "7B", "source_id": "qwen25vl", "input_source_ids": ["qwen25vl"],
+      "train_frames": "Dynamic FPS / length-adaptive; no single fixed cap", "train_resolution": "Native/dynamic; H,W multiples of 28",
+      "eval_frames": "≤768", "eval_resolution": "Native/dynamic; ≤24,576 video tokens total",
+      "scores": {"mvbench": 69.6, "videomme": 65.1, "longvideobench_val_v": 56.0, "lvbench": 45.3}
+    },
+    {
+      "model": "Qwen2.5-VL-3B", "size": "3B", "source_id": "qwen25vl", "input_source_ids": ["qwen25vl"],
+      "train_frames": "Dynamic FPS / length-adaptive; no single fixed cap", "train_resolution": "Native/dynamic; H,W multiples of 28",
+      "eval_frames": "≤768", "eval_resolution": "Native/dynamic; ≤24,576 video tokens total",
+      "scores": {"mvbench": 67.0, "videomme": 61.5, "longvideobench_val_v": 54.2, "lvbench": 43.3}
+    },
+    {
+      "model": "VideoChat-Flash-2B@448", "size": "2B", "source_id": "videochat_flash", "input_source_ids": ["videochat_flash"],
+      "train_frames": "Stage 1: 4; Stage 2: 8; Stages 3–4: dynamic 64–512", "train_resolution": "Stages 1–3: 224²; Stage 4: 448²",
+      "eval_frames": "MV/Video-MME/LongVideoBench ≤512; LVBench ≤640", "eval_resolution": "448×448 per frame",
+      "scores": {"mvbench": 70.0, "videomme": 57.0, "longvideobench_val_v": 58.3, "lvbench": 42.9}
+    },
+    {
+      "model": "VideoChat-Flash-7B@448", "size": "7B", "source_id": "videochat_flash", "input_source_ids": ["videochat_flash"],
+      "train_frames": "Stage 1: 4; Stage 2: 8; Stages 3–4: dynamic 64–512", "train_resolution": "Stages 1–3: 224²; Stage 4: 448²",
+      "eval_frames": "MV/Video-MME/LongVideoBench ≤512; LVBench ≤640", "eval_resolution": "448×448 per frame",
+      "scores": {"mvbench": 74.0, "videomme": 65.3, "longvideobench_val_v": 64.7, "lvbench": 48.2}
+    },
+    {
+      "model": "LLaVA-OneVision-2", "size": "8B", "source_id": "llava_ov2", "input_source_ids": ["llava_ov2"],
+      "train_frames": "S1: 1 FPS/≤30; S2: 1 FPS/≤60 + longer clips ≤90 (FPS unstated); S3: uniform ≤384; S4: codec-stream 384/768", "train_resolution": "Native/dynamic; no single fixed per-frame H×W",
+      "eval_frames": "Score run: exact setting not stated; released processor: target_fps=null, ≤768 (duration/frame-budget sampling)", "eval_resolution": "Native/dynamic; released clip pixel budget 12,845,056",
+      "rank_excluded_tasks": ["longvideobench_val_v"],
+      "scores": {"mvbench": 66.2, "videomme": 71.9, "longvideobench_val_v": 66.9, "lvbench": 55.5}
+    },
+    {
+      "model": "Qwen3-VL", "size": "8B", "source_id": "llava_ov2", "input_source_ids": ["qwen3vl"],
+      "train_frames": "Length-adaptive FPS and frame cap; no single fixed count", "train_resolution": "Native/dynamic resolution",
+      "eval_frames": "OV2 score table: exact count not restated; Qwen official report: 2 FPS, ≤2,048", "eval_resolution": "OV2 score table: exact budget not restated; Qwen official: dynamic, ≤640 visual tokens/frame and ≤224K total",
+      "rank_excluded_tasks": ["longvideobench_val_v"],
+      "scores": {"mvbench": 69.0, "videomme": 71.4, "longvideobench_val_v": 68.0, "lvbench": 58.0}
+    },
+    {
+      "model": "Keye-VL-1.5", "size": "8B", "source_id": "llava_ov2", "input_source_ids": ["keye"],
+      "train_frames": "Content-adaptive Slow–Fast; no fixed count; final pretrain context 128K", "train_resolution": "Native/dynamic; Slow high-res + Fast at 30% of Slow tokens; e.g. 75K total",
+      "eval_frames": "OV2 score run: not stated; Keye report sweeps 32/64/128/768 and 1–4 FPS; release example: 2 FPS/≤1,024", "eval_resolution": "OV2 score run: not stated; native/dynamic Slow–Fast under a token budget",
+      "rank_excluded_tasks": ["longvideobench_val_v"],
+      "scores": {"mvbench": 56.9, "videomme": 73.0, "longvideobench_val_v": 66.0, "lvbench": 42.8}
+    },
+    {
+      "model": "InternVL-3.5", "size": "8B", "source_id": "llava_ov2", "input_source_ids": ["internvl35"],
+      "train_frames": "Variable-frame video training; fixed cap not reported", "train_resolution": "Dynamic tiling with 448×448 tiles",
+      "eval_frames": "OV2 score run: not stated; Intern official: MVBench 16; Video-MME/LVB max over 16/32/48/64", "eval_resolution": "OV2 score run: not stated; official video code uses one 448×448 tile/frame",
+      "rank_excluded_tasks": ["longvideobench_val_v"],
+      "scores": {"mvbench": 72.1, "videomme": 65.9, "longvideobench_val_v": 62.4, "lvbench": 46.7}
+    },
+    {
+      "model": "PLM", "size": "8B", "source_id": "llava_ov2", "input_source_ids": ["plm"],
+      "train_frames": "Stage maxima: 8 → 16 → 32", "train_resolution": "448×448 per frame",
+      "eval_frames": "32 (released lmms-eval adapter/config)", "eval_resolution": "448×448 per frame",
+      "rank_excluded_tasks": ["longvideobench_val_v"],
+      "scores": {"mvbench": 77.1, "videomme": 60.5, "longvideobench_val_v": 59.6, "lvbench": 44.5}
+    },
+    {
+      "model": "LLaVA-OneVision-1.5", "size": "8B", "source_id": "llava_ov2", "input_source_ids": ["llava_ov15"],
+      "train_frames": "Video data used; fixed cap not reported in technical report", "train_resolution": "Native/dynamic (RICE-ViT); no single fixed H×W",
+      "eval_frames": "OV2 score run: exact count not stated", "eval_resolution": "OV2 score run: not stated; released processor is native/dynamic with ≤3,240,000 pixels per image/frame",
+      "rank_excluded_tasks": ["longvideobench_val_v"],
+      "scores": {"mvbench": 51.2, "videomme": 61.1, "longvideobench_val_v": 56.2, "lvbench": 40.1}
+    },
+    {
+      "model": "VideoChat3", "size": "4B", "source_id": "videochat3", "input_source_ids": ["videochat3"],
+      "train_frames": "Stage default caps/FPS (dataset-overridable): S0-1 2,048@4; S0-2 512@4; S1 2,048@4; S2 1,024@1; S3 3,600@2", "train_resolution": "S2–S3 ≤448²/frame; earlier stages use token/pixel budgets rather than one H×W",
+      "eval_frames": "Video-MME: 2 FPS/≤1,024, then uniform full-video sampling; LVBench: same with ≤2,048; LVB ablation: not stated", "eval_resolution": "Video-MME/LVBench: ≤448²/frame + 80K visual-token total; LVB ablation: not stated",
+      "rank_excluded_tasks": ["longvideobench_val_v"],
+      "scores": {"videomme": 70.1, "longvideobench_val_v": 64.2, "lvbench": 56.7}
+    },
+    {
+      "model": "Lance", "size": "3B active", "source_id": "lance", "input_source_ids": ["lance"],
+      "train_frames": "Released understanding config: 12 FPS × ≤2 s (≤24 sampled); model cap ≤121; paper gives no single global count", "train_resolution": "Released understanding config: 616-base aspect-ratio buckets",
+      "eval_frames": "MVBench score source does not state", "eval_resolution": "MVBench score source does not state",
+      "scores": {"mvbench": 62.0}
+    },
+    {
+      "model": "NEO-ov", "size": "2B", "source_id": "neo_ov", "input_source_ids": ["neo_ov"],
+      "train_frames": "≤128", "train_resolution": "Native/multi-resolution, 256²–4096²",
+      "eval_frames": "MVBench 64; Video-MME/LVBench 1 FPS ≤256; LongVideoBench 256", "eval_resolution": "Native aspect ratio; max area 360×640 pixels/frame",
+      "scores": {"mvbench": 65.7, "videomme": 60.4, "longvideobench_val_v": 56.8, "lvbench": 43.3}
+    },
+    {
+      "model": "NEO-ov", "variant": "9B", "size": "9B", "source_id": "neo_ov", "input_source_ids": ["neo_ov"],
+      "train_frames": "≤128", "train_resolution": "Native/multi-resolution, 256²–4096²",
+      "eval_frames": "MVBench 32; Video-MME/LVBench 1 FPS ≤256; LongVideoBench 256", "eval_resolution": "Native aspect ratio; max area 360×640 pixels/frame",
+      "scores": {"mvbench": 70.7, "videomme": 67.4, "longvideobench_val_v": 63.5, "lvbench": 46.4}
+    }
+  ]
+}

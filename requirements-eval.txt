@@ -1,0 +1,6 @@
+# Optional 21+4 VLM evaluation environment. The exact upstream commit is the
+# lmms-eval v0.7.1 tag used by the PixelUMM evaluation tools.
+-r requirements.txt
+
+lmms_eval[video] @ git+https://github.com/EvolvingLMMs-Lab/lmms-eval.git@88b23e2bfa16a1edbc16e9e238ed82130b3a4f56
+sqlitedict==2.1.0

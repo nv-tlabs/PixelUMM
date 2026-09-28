@@ -1,0 +1,30 @@
+# Python build and interpreter artifacts
+__pycache__/
+*.py[cod]
+*.so
+
+# Test, lint, and coverage caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+.venv-guardrails/
+.coverage
+htmlcov/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+*.ipynb_checkpoints/
+
+# Runtime outputs belong outside this source repository
+/wandb/
+/results/
+/outputs/
+/checkpoints/
+/eval_results/
+/models/
+*.log
+*.tmp
+*.bak

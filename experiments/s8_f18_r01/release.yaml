@@ -1,0 +1,52 @@
+schema: pixelumm_scientific_config_v1
+
+# F18 generation profile: no dedicated video understanding tube embedder.
+# Never infer this profile by silently dropping unmatched checkpoint keys.
+model:
+  llm_backend: qwen3
+  qwen_mlp_sequence_chunk_size: 32768
+  qwen3_mrope_type: sensenova
+  qwen3_rope_theta: 1000000.0
+  llm_path: Qwen/Qwen3-8B
+  layer_module: Qwen3MoTDecoderLayer
+  enable_pixel_video: true
+  pixel_token_patch_size: 16
+  pixel_embedder_type: image_raw_patch_linear
+  pixel_separate_und_gen_embedder: true
+  pixel_video_embedder_type: video_raw_tube_linear
+  pixel_video_separate_und_gen_embedder: false
+  pixel_video_temporal_patch_size: 4
+  pixel_image_additive_pos_embed_type: none
+  pixel_video_additive_pos_embed_type: none
+  pixel_head_type: minit2i_linear
+  pixel_video_head_type: jit_style
+  sensenova_vision_rope_theta: 10000.0
+  sensenova_vision_max_position_embeddings: 10000
+  add_timestep_embedding: false
+  add_noise_scale_embedding: false
+  noise_scale: 1.0
+  noise_scale_mode: constant
+  packed_attention_impl: flex
+  inference_attention_backend: flash_attn_varlen
+  packed_expert_routing: pixelumm_mot
+  ce_loss_checkpoint_chunk_size: 4096
+  text_cond_dropout_prob: 0.1
+
+data:
+  packed_sequence_layout: pixelumm_mot
+
+training:
+  gen_space: pixel
+  und_space: pixel
+  prediction_type: x
+  loss_type: v_loss
+  x_pred_t_min: 0.05
+  visual_gen: true
+  visual_und: true
+  # Inference freezes every parameter after load; no training-only freeze mode.
+  freeze_und: false
+  conditional_branch_gradient_contract: pixelumm_zero_v1
+  noise_time_logit_mean: 0.0
+  noise_time_logit_std: 1.0
+  time_schedule: pixelumm_resolution
+  mse_loss_reduction: sample

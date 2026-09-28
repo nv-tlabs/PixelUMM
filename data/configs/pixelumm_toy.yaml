@@ -1,0 +1,31 @@
+t2i:
+  registry_name: pixelumm_local_jsonl
+  manifest_paths:
+    - ${PIXELUMM_TOY_ROOT}/t2i.jsonl
+  allowed_task: t2i
+  is_mandatory: true
+  weight: 1.0
+
+t2v:
+  registry_name: pixelumm_local_jsonl
+  manifest_paths:
+    - ${PIXELUMM_TOY_ROOT}/t2v.jsonl
+  allowed_task: t2v
+  is_mandatory: true
+  weight: 1.0
+
+image_vlm:
+  registry_name: pixelumm_local_jsonl
+  manifest_paths:
+    - ${PIXELUMM_TOY_ROOT}/image_vlm.jsonl
+  allowed_task: image_vlm
+  is_mandatory: true
+  weight: 1.0
+
+video_vlm:
+  registry_name: pixelumm_local_jsonl
+  manifest_paths:
+    - ${PIXELUMM_TOY_ROOT}/video_vlm.jsonl
+  allowed_task: video_vlm
+  is_mandatory: true
+  weight: 1.0

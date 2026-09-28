@@ -1,0 +1,6 @@
+# Only needed to build the pinned FlashAttention source against installed torch.
+setuptools==80.9.0
+wheel==0.45.1
+packaging==25.0
+psutil==7.0.0
+ninja==1.13.0

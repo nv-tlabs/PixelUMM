@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "description": "Structured comparison rows shown in RESULTS_WIDE.html. PixelUMM checkpoints remain in the main result block; published external models are reference baselines.",
+  "hidden_tasks": [
+    "pope"
+  ],
+  "task_order": [
+    "ai2d",
+    "chartqa",
+    "docvqa_val",
+    "hallusionbench",
+    "infovqa_val",
+    "mmbench_en",
+    "mmmu_val",
+    "mmstar",
+    "ocrbench",
+    "realworldqa",
+    "seedbench_image",
+    "textvqa_val"
+  ],
+  "task_labels": {
+    "ai2d": "AI2D",
+    "chartqa": "ChartQA",
+    "countbench": "CountBench",
+    "cv_bench": "CV-Bench",
+    "docvqa_val": "DocVQA",
+    "gqa": "GQA",
+    "hallusionbench": "HallB",
+    "infovqa_val": "InfoVQA",
+    "mme": "MME",
+    "mmbench_en": "MMB-EN",
+    "mmmu_pro_standard": "MMMU-Pro",
+    "mmmu_val": "MMMU",
+    "mmstar": "MMStar",
+    "mmvp": "MMVP",
+    "muirbench": "MuirBench",
+    "ocrbench": "OCRBench",
+    "pixmo_count": "PixMo-Count",
+    "realworldqa": "RWQA",
+    "seedbench_2_plus": "SEED2+",
+    "seedbench_image": "SEED-I",
+    "textvqa_val": "TextVQA",
+    "vstar_bench": "V*",
+    "blink": "BLINK"
+  },
+  "rows": [
+    {
+      "kind": "published",
+      "model": "BAGEL",
+      "source": "14B, TUNA-2 paper",
+      "scores": {
+        "ai2d": 89.2,
+        "chartqa": 78.5,
+        "countbench": 82.5,
+        "gqa": 66.4,
+        "mmmu_val": 55.3,
+        "mmvp": 85.0,
+        "ocrbench": 73.3,
+        "realworldqa": 72.8,
+        "seedbench_2_plus": 71.9,
+        "vstar_bench": 70.2
+      }
+    },
+    {
+      "kind": "published",
+      "model": "TUNA (TUNA-1)",
+      "source": "7B, TUNA-2 paper",
+      "scores": {
+        "ai2d": 79.3,
+        "chartqa": 85.8,
+        "countbench": 73.5,
+        "gqa": 63.9,
+        "mmmu_val": 49.8,
+        "mmvp": 70.7,
+        "ocrbench": 74.3,
+        "realworldqa": 66.1,
+        "seedbench_2_plus": 52.7,
+        "vstar_bench": 52.4
+      }
+    },
+    {
+      "kind": "published",
+      "model": "TUNA-R",
+      "source": "7B, paper",
+      "scores": {
+        "ai2d": 79.4,
+        "chartqa": 85.6,
+        "countbench": 77.8,
+        "gqa": 63.5,
+        "mmmu_val": 51.1,
+        "mmvp": 74.7,
+        "ocrbench": 78.3,
+        "realworldqa": 67.9,
+        "seedbench_2_plus": 58.4,
+        "vstar_bench": 57.6
+      }
+    },
+    {
+      "kind": "published",
+      "model": "TUNA-2",
+      "source": "7B, paper",
+      "scores": {
+        "ai2d": 79.6,
+        "chartqa": 85.6,
+        "countbench": 81.7,
+        "gqa": 65.0,
+        "mmmu_val": 50.7,
+        "mmvp": 77.3,
+        "ocrbench": 79.7,
+        "realworldqa": 67.7,
+        "seedbench_2_plus": 61.1,
+        "vstar_bench": 59.2
+      }
+    },
+    {
+      "kind": "published",
+      "model": "Qwen2.5-VL",
+      "source": "7B, OV-1.5 / Qwen2.5-VL / TUNA-2 / NEO-ov papers",
+      "scores": {
+        "ai2d": 82.6,
+        "blink": 56.4,
+        "chartqa": 84.1,
+        "countbench": 86.4,
+        "cv_bench": 80.0,
+        "docvqa_val": 94.9,
+        "gqa": 60.7,
+        "infovqa_val": 81.7,
+        "mme": 2347,
+        "mmbench_en": 83.4,
+        "mmmu_pro_standard": 36.3,
+        "mmmu_val": 51.3,
+        "mmstar": 62.5,
+        "mmvp": 78.0,
+        "muirbench": 59.6,
+        "ocrbench": 84.2,
+        "pixmo_count": 63.3,
+        "realworldqa": 68.5,
+        "seedbench_2_plus": 70.9,
+        "seedbench_image": 77.5,
+        "textvqa_val": 84.9,
+        "vstar_bench": 77.0
+      }
+    },
+    {
+      "kind": "published",
+      "model": "LLaVA-OneVision-1.5",
+      "source": "8B, paper",
+      "scores": {
+        "ai2d": 84.2,
+        "blink": 48.3,
+        "chartqa": 86.5,
+        "countbench": 88.2,
+        "cv_bench": 80.7,
+        "docvqa_val": 95.0,
+        "infovqa_val": 78.4,
+        "mmbench_en": 84.1,
+        "mmmu_pro_standard": 37.4,
+        "mmmu_val": 55.4,
+        "mmstar": 67.7,
+        "ocrbench": 82.9,
+        "pixmo_count": 62.2,
+        "realworldqa": 68.1,
+        "seedbench_2_plus": 69.2,
+        "seedbench_image": 77.3,
+        "vstar_bench": 78.0
+      }
+    },
+    {
+      "kind": "published",
+      "model": "LLaVA-OneVision-2",
+      "source": "8B, LLaVA-OneVision-2 paper",
+      "scores": {
+        "ai2d": 84.3,
+        "blink": 63.5,
+        "chartqa": 85.9,
+        "countbench": 89.0,
+        "docvqa_val": 95.2,
+        "infovqa_val": 74.4,
+        "mmbench_en": 85.7,
+        "mmstar": 64.3,
+        "ocrbench": 78.2,
+        "pixmo_count": 64.0,
+        "realworldqa": 69.7,
+        "vstar_bench": 85.9
+      }
+    },
+    {
+      "kind": "published",
+      "model": "Qwen3-VL-Instruct",
+      "source": "8B, NEO-ov / LLaVA-OneVision-2 papers",
+      "scores": {
+        "ai2d": 85.7,
+        "blink": 69.1,
+        "chartqa": 89.6,
+        "countbench": 89.8,
+        "docvqa_val": 96.1,
+        "hallusionbench": 61.1,
+        "mmbench_en": 84.5,
+        "mmmu_val": 69.6,
+        "mmstar": 70.9,
+        "muirbench": 64.4,
+        "ocrbench": 89.6,
+        "pixmo_count": 62.4,
+        "realworldqa": 71.5,
+        "vstar_bench": 85.3
+      }
+    },
+    {
+      "kind": "published",
+      "model": "NEO-ov",
+      "source": "8B, paper",
+      "scores": {
+        "ai2d": 85.4,
+        "blink": 62.8,
+        "chartqa": 86.2,
+        "docvqa_val": 91.9,
+        "hallusionbench": 59.8,
+        "mmbench_en": 85.1,
+        "mmmu_val": 68.1,
+        "mmstar": 67.3,
+        "muirbench": 58.2,
+        "ocrbench": 81.6,
+        "realworldqa": 67.8,
+        "seedbench_image": 76.6,
+        "textvqa_val": 78.5
+      }
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+name: pixelumm-regular21-official-lmms-v1
+modality: image_understanding
+description: >-
+  Fully local, upstream-scored image-understanding suite. POPE is deliberately
+  excluded. Judge/server benchmarks are owned by a separate contract.
+generation:
+  decoding: greedy
+  temperature: 0.0
+  do_sample: false
+  num_beams: 1
+  batch_size_per_gpu: 1
+  reasoning_modes:
+    standard_bare:
+      assistant_prefill: ""
+      semantics: train_aligned_bare_assistant_prefix
+      train_aligned: true
+      max_new_tokens_policy: official_task_value
+      scoring: strip_completed_think_trace_keep_raw
+model_input:
+  chat_template: qwen_chatml
+  system_prompt: You are a helpful assistant.
+  visual_layout: pixelumm_mot
+  attention: causal_start__full_patches__causal_end
+  mrope: sensenova
+  patch_size: 16
+  image_resize: native_smart_resize
+  min_image_pixels: 3136
+  multi_image_token_budget: 10000
+  multi_image_labels: "Picture {index}: "
+
+# Every benchmark below has an upstream lmms-eval v0.7.1 task/scorer and at
+# least two papers with reported scores. "display" pins the paper-facing
+# scalar; raw lmms metrics and per-category details remain in summary.json.
+tasks:
+  - id: mmmu_val
+    family: general_reasoning
+    split: validation
+    display: {metric: mmmu_acc}
+    reported_by: [TUNA, NEO-ov]
+  - id: mmstar
+    family: general_reasoning
+    split: val
+    display: {metric: average}
+    reported_by: [TUNA, NEO]
+  - id: realworldqa
+    family: general_reasoning
+    split: test
+    display: {metric: exact_match}
+    reported_by: [TUNA, TUNA2]
+  - id: seedbench_image
+    family: general_reasoning
+    split: test_image_subset
+    display: {metric: seed_image}
+    reported_by: [TUNA, LLaVA-OneVision-1.5]
+    note: Local task filters the official SEEDBench rows to data_type=image.
+  - id: ai2d
+    family: diagram
+    split: test
+    display: {metric: exact_match}
+    reported_by: [TUNA, TUNA2]
+  - id: docvqa_val
+    family: document_ocr
+    split: validation
+    display: {metric: anls}
+    reported_by: [LLaVA-OneVision-1.5, NEO-ov]
+  - id: chartqa
+    family: document_ocr
+    split: test
+    display: {metric: relaxed_overall}
+    reported_by: [TUNA, TUNA2]
+  - id: infovqa_val
+    family: document_ocr
+    split: validation
+    display: {metric: anls}
+    reported_by: [LLaVA-OneVision-1.5, NEO-ov]
+  - id: textvqa_val
+    family: document_ocr
+    split: validation
+    display: {metric: exact_match}
+    reported_by: [Qwen2.5-VL, NEO-ov]
+  - id: ocrbench
+    family: document_ocr
+    split: test
+    display: {metric: ocrbench_accuracy}
+    reported_by: [TUNA, TUNA2]
+  - id: mme
+    family: perception_and_cognition
+    split: test
+    display:
+      derived: sum
+      metrics: [mme_perception_score, mme_cognition_score]
+      label: MME total
+    reported_by: [TUNA, Qwen2.5-VL]
+  - id: gqa
+    family: visual_question_answering
+    split: testdev_balanced
+    display: {metric: exact_match}
+    reported_by: [TUNA, TUNA2]
+  - id: mmvp
+    family: fine_grained_perception
+    split: test
+    display: {metric: mmvp_accuracy}
+    secondary_metric: mmvp_pair_accuracy
+    reported_by: [TUNA2, Libra]
+  - id: seedbench_2_plus
+    family: text_rich_reasoning
+    split: test
+    display: {metric: seedbench_2_plus_all}
+    reported_by: [Qwen2.5-VL, LLaVA-OneVision-1.5]
+  - id: cv_bench
+    family: spatial_reasoning
+    split: test
+    display: {metric: cv_bench_acc}
+    reported_by: [LLaVA-OneVision-1.5, LLaVA-OneVision-2]
+  - id: countbench
+    family: counting
+    split: test
+    display: {metric: acc}
+    reported_by: [TUNA2, LLaVA-OneVision-1.5]
+  - id: pixmo_count
+    family: counting
+    split: test
+    display: {metric: acc}
+    reported_by: [LLaVA-OneVision-1.5, LLaVA-OneVision-2]
+  - id: vstar_bench
+    family: fine_grained_perception
+    split: test
+    display: {metric: vstar_overall_acc}
+    reported_by: [TUNA2, Qwen3-VL]
+  - id: mmmu_pro_standard
+    family: expert_reasoning
+    split: standard_10_options_test
+    display: {metric: mmmu_acc}
+    reported_by: [Qwen2.5-VL, LLaVA-OneVision-1.5]
+  - id: blink
+    family: multi_image_perception
+    split: test
+    display: {metric: blink_acc}
+    reported_by: [Qwen2.5-VL, LLaVA-OneVision-2]
+    note: Official lmms group aggregate over fourteen leaf tasks.
+  - id: muirbench
+    family: multi_image_reasoning
+    split: test
+    display: {metric: muirbench_score_overall}
+    reported_by: [Qwen2.5-VL, Qwen3-VL]
+
+# One benchmark per resumable Slurm task. The monitor limits concurrent groups,
+# so a long benchmark can be retried without replaying or idling unrelated work.
+worker_groups:
+  - [mmmu_val]
+  - [mmstar]
+  - [realworldqa]
+  - [seedbench_image]
+  - [ai2d]
+  - [docvqa_val]
+  - [chartqa]
+  - [infovqa_val]
+  - [textvqa_val]
+  - [ocrbench]
+  - [mme]
+  - [gqa]
+  - [mmvp]
+  - [seedbench_2_plus]
+  - [cv_bench]
+  - [countbench]
+  - [pixmo_count]
+  - [vstar_bench]
+  - [mmmu_pro_standard]
+  - [blink]
+  - [muirbench]

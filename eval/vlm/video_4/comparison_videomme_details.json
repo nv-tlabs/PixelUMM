@@ -1,0 +1,68 @@
+{
+  "schema_version": 2,
+  "task_order": [
+    "videomme",
+    "videomme_wo_sub_short",
+    "videomme_wo_sub_medium",
+    "videomme_wo_sub_long",
+    "videomme_w_sub",
+    "videomme_w_sub_short",
+    "videomme_w_sub_medium",
+    "videomme_w_sub_long"
+  ],
+  "task_labels": {
+    "videomme": "w/o sub Overall",
+    "videomme_wo_sub_short": "w/o sub Short",
+    "videomme_wo_sub_medium": "w/o sub Medium",
+    "videomme_wo_sub_long": "w/o sub Long",
+    "videomme_w_sub": "w/ sub Overall",
+    "videomme_w_sub_short": "w/ sub Short",
+    "videomme_w_sub_medium": "w/ sub Medium",
+    "videomme_w_sub_long": "w/ sub Long"
+  },
+  "sources": {
+    "videomme_official": {
+      "label": "Video-MME official leaderboard",
+      "url": "https://video-mme.github.io/home_page.html",
+      "protocol": "Official duration breakdown: Short <2 min, Medium 4-15 min, Long 30-60 min; 900 questions per bucket. Each row reports Overall/Short/Medium/Long both without and with subtitles."
+    },
+    "videochat_flash": {
+      "label": "VideoChat-Flash paper, comprehensive video table",
+      "url": "https://arxiv.org/abs/2501.00574",
+      "local": "references/VideoChat-Flash-paper/2501.00574-source/table/videoqa.tex"
+    },
+    "qwen25vl": {
+      "label": "Qwen2.5-VL technical report",
+      "url": "https://arxiv.org/abs/2502.13923",
+      "local": "references/Qwen-VL-paper/2502.13923-source/content/experiments_video.tex"
+    },
+    "llava_ov2": {
+      "label": "LLaVA-OneVision-2 paper",
+      "url": "https://arxiv.org/abs/2605.25979",
+      "local": "references/LLaVA-OneVision-paper/2605.25979-source/variable_theme_table.tex"
+    },
+    "llava_video": {
+      "label": "LLaVA-Video paper, Table 2",
+      "url": "https://arxiv.org/abs/2410.02713"
+    }
+  },
+  "rows": [
+    {"model": "GPT-4o", "size": "—", "source_id": "videomme_official", "scores": {"videomme_wo_sub_short": 80.0, "videomme_wo_sub_medium": 70.3, "videomme_wo_sub_long": 65.3, "videomme_w_sub": 77.2, "videomme_w_sub_short": 82.8, "videomme_w_sub_medium": 76.6, "videomme_w_sub_long": 72.1}},
+    {"model": "Gemini-1.5-Pro", "size": "—", "source_id": "videomme_official", "scores": {"videomme_wo_sub_short": 81.7, "videomme_wo_sub_medium": 74.3, "videomme_wo_sub_long": 67.4, "videomme_w_sub": 81.3, "videomme_w_sub_short": 84.5, "videomme_w_sub_medium": 81.0, "videomme_w_sub_long": 77.4}},
+    {"model": "LongVA", "size": "7B", "source_id": "videomme_official", "scores": {"videomme_wo_sub_short": 61.1, "videomme_wo_sub_medium": 50.4, "videomme_wo_sub_long": 46.2, "videomme_w_sub": 54.3, "videomme_w_sub_short": 61.6, "videomme_w_sub_medium": 53.6, "videomme_w_sub_long": 47.6}},
+    {"model": "LLaVA-OneVision", "size": "7B", "source_id": "videochat_flash", "scores": {"videomme_w_sub": 61.5}},
+    {"model": "LLaVA-Video", "size": "7B", "source_id": "llava_video", "scores": {"videomme_w_sub": 69.7}},
+    {"model": "LLaVA-Video", "size": "72B", "source_id": "videomme_official", "scores": {"videomme": 70.6, "videomme_wo_sub_short": 81.4, "videomme_wo_sub_medium": 68.9, "videomme_wo_sub_long": 61.5, "videomme_w_sub": 76.9, "videomme_w_sub_short": 82.8, "videomme_w_sub_medium": 75.6, "videomme_w_sub_long": 72.5}},
+    {"model": "VideoChat-Flash-2B@448", "size": "2B", "source_id": "videochat_flash", "scores": {"videomme_wo_sub_long": 44.9, "videomme_w_sub": 63.9, "videomme_w_sub_long": 54.0}},
+    {"model": "VideoChat-Flash-7B@448", "size": "7B", "source_id": "videomme_official", "scores": {"videomme_wo_sub_short": 78.0, "videomme_wo_sub_medium": 67.8, "videomme_wo_sub_long": 55.6, "videomme_w_sub": 69.7, "videomme_w_sub_short": 76.6, "videomme_w_sub_medium": 63.8, "videomme_w_sub_long": 63.3}},
+    {"model": "Qwen2.5-VL-72B", "size": "72B", "source_id": "qwen25vl", "scores": {"videomme_w_sub": 79.1}},
+    {"model": "Qwen2.5-VL-7B", "size": "7B", "source_id": "qwen25vl", "scores": {"videomme_w_sub": 71.6}},
+    {"model": "Qwen2.5-VL-3B", "size": "3B", "source_id": "qwen25vl", "scores": {"videomme_w_sub": 67.6}},
+    {"model": "LLaVA-OneVision-2", "size": "8B", "source_id": "llava_ov2", "scores": {"videomme_w_sub": 76.3}},
+    {"model": "Qwen3-VL", "size": "8B", "source_id": "llava_ov2", "scores": {"videomme_w_sub": 75.6}},
+    {"model": "Keye-VL-1.5", "size": "8B", "source_id": "llava_ov2", "scores": {"videomme_w_sub": 76.2}},
+    {"model": "InternVL-3.5", "size": "8B", "source_id": "llava_ov2", "scores": {"videomme_w_sub": 68.6}},
+    {"model": "PLM", "size": "8B", "source_id": "llava_ov2", "scores": {"videomme_w_sub": 65.6}},
+    {"model": "LLaVA-OneVision-1.5", "size": "8B", "source_id": "llava_ov2", "scores": {"videomme_w_sub": 65.5}}
+  ]
+}

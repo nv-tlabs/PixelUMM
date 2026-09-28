@@ -1,0 +1,4 @@
+# Optional one-time converter for the official BAGEL parquet toy example.
+-r requirements.txt
+
+pyarrow==23.0.1

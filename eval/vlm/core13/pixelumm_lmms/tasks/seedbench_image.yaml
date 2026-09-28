@@ -1,0 +1,22 @@
+dataset_path: lmms-lab/SEED-Bench
+dataset_kwargs:
+  token: False
+task: seedbench_image
+test_split: test
+process_docs: !function local_utils.seedbench_image_process_docs
+output_type: generate_until
+doc_to_visual: !function local_utils.seedbench_upstream_doc_to_visual
+doc_to_text: !function local_utils.seedbench_upstream_doc_to_text
+doc_to_target: answer
+process_results: !function local_utils.seedbench_image_process_result
+generation_kwargs:
+  until:
+    - "ASSISTANT:"
+  image_aspect_ratio: original
+metric_list:
+  - metric: seed_image
+    aggregation: !function local_utils.seedbench_upstream_aggregation
+    higher_is_better: true
+metadata:
+  version: 1.0
+  contract: upstream-seedbench-image-subset

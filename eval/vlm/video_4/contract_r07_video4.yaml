@@ -1,0 +1,52 @@
+name: pixelumm-r07-video4-short-image-v1
+modality: video_understanding
+reference_suite: TUNA
+eval_codebase:
+  name: lmms-eval
+  revision: 88b23e2bfa16a1edbc16e9e238ed82130b3a4f56
+generation:
+  decoding: greedy
+  temperature: 0.0
+  do_sample: false
+  num_beams: 1
+  batch_size_per_gpu: 1
+  assistant_prefix: bare
+  reasoning: allow_optional_completed_think_trace_then_strip_for_scoring
+model_input:
+  chat_template: qwen_chatml
+  system_prompt: You are a helpful assistant.
+  visual_layout: pixelumm_mot
+  attention: causal_timestamp__causal_start__full_visual_island__causal_end
+  mrope: sensenova_sequence_hw
+  patch_size: 16
+  source_fps_min: 1
+  source_fps_max: 240
+  short_video_eval_arm: short_image
+  sparse_sampling: strict_1fps_timestamp_grid
+  sparse_max_sampled_frames: 96
+  short_embedder: per_frame_image
+  fallback_sampling: full_selected_clip_uniform_unique_frames
+  fallback_condition: selected_duration_above_96s
+  fallback_embedder: per_frame_image
+  resize: pixelumm_native_smart_resize_bicubic_antialias
+  resize_multiple: 16
+  min_frame_pixels: 256
+  max_frame_pixels: 200704
+  max_frame_raw_patch_tokens: 784
+  max_video_raw_patch_tokens: 75264
+  note: >-
+    R07 sparse-only video understanding: source FPS outside [1,240] is rejected.
+    For D<=96s use strict 1 FPS image input with at most 96 unique frames;
+    for D>96s use full-clip uniform input with at most 96 unique frames.
+    Frames preserve native aspect ratio and are smart-resized to at most
+    448^2 pixels. Never interpolate or duplicate sampled source frames.
+tasks:
+  - {id: mvbench, paper_split: test, metric: mvbench_accuracy}
+  - {id: videomme, paper_split: test_without_subtitles, metric: videomme_perception_score}
+  - {id: longvideobench_val_v, paper_split: validation_video_only, metric: lvb_acc}
+  - {id: lvbench, paper_split: test, lmms_split: train, metric: lvbench_score}
+worker_groups:
+  - [mvbench]
+  - [videomme]
+  - [longvideobench_val_v]
+  - [lvbench]
