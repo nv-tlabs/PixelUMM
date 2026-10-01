@@ -138,3 +138,19 @@ Most source files are licensed under [Apache-2.0](LICENSE). File-specific
 notices are retained where upstream code has different terms; in particular,
 `modeling/pixelumm/modeling_utils.py` retains its DiT-derived CC BY-NC 4.0
 notice. Model weights have separate terms in the model repository.
+
+## Citation
+
+If you use PixelUMM, please cite our paper:
+
+```bibtex
+@misc{wei2026pixelummencoderfreeunifiedimage,
+  title={PixelUMM: Encoder-Free Unified Image and Video Understanding and Generation},
+  author={Cong Wei and Xuanchi Ren and Bryan Chu and Weiming Ren and Huan Ling and Jiahui Huang and Laura Leal-Taixé and Sanja Fidler and Wenhu Chen and Zian Wang and Jay Zhangjie Wu},
+  year={2026},
+  eprint={2609.38597},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2609.38597},
+}
+```
