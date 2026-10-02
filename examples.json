@@ -1,0 +1,547 @@
+{
+  "sections": [
+    {
+      "id": "t2v-480",
+      "title": "Text-to-video · 832×464 · 96 frames · 24 fps · 4 s",
+      "aspect": "832 / 464",
+      "examples": [
+        {
+          "id": "tea-time",
+          "title": "Tea in Tokyo",
+          "prompt": "A tranquil scene unfolds inside a quiet, traditional Japanese coffee shop in Tokyo, capturing a moment of peace for an elderly man. The central figure is an elderly man with kind eyes and short, graying hair, seated alone at a small, round wooden table. He wears a simple, earth-toned tweed jacket over a collared shirt and is dressed in dark trousers. A gentle, contented smile is on his face as he holds a white ceramic cup, from which a wisp of steam gently rises. In the foreground, on the polished dark wood of the table, rests a matching ceramic saucer. The elderly man lifts the steaming ceramic cup, pauses to enjoy the aroma, and takes a quiet sip as his smile deepens. The camera slowly dollies across the polished table while steam coils, paper screens glow, and a server passes softly in the background.",
+          "video": "./video/tea-time.mp4",
+          "poster": "./poster/tea-time.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "redwood-suv",
+          "title": "Redwood road",
+          "prompt": "A dynamic shot from behind a white vintage SUV with a black roof rack as it speeds up a steep dirt road surrounded by towering redwood trees on a rugged mountain slope. Dust kicks up from its tires, and the sunlight shines on the SUV, casting a warm glow over the scene. The dirt road curves gently into the distance, with no other vehicles in sight. The trees on either side are dense redwoods, with patches of greenery scattered throughout. The car navigates the curve with ease, making it seem as if it is on a thrilling drive through the rugged terrain. The dirt road is framed by steep hills and mountains, with a clear blue sky above and wispy clouds drifting by. The camera captures the vehicle from the rear, emphasizing its powerful and adventurous journey. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/redwood-suv.mp4",
+          "poster": "./poster/redwood-suv.jpg",
+          "sampler": "DPM-Solver++ · 50 steps"
+        },
+        {
+          "id": "snow-train",
+          "title": "Snow train",
+          "prompt": "A train moves through snowy mountains in the cold morning light, leaving a soft trail of mist and powder behind it. The camera shows a wide landscape with pine trees, cliffs, and white slopes as the train curves along the track. Snow particles drift in the air, windows glow faintly, and the motion feels steady and cinematic. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/snow-train.mp4",
+          "poster": "./poster/snow-train.jpg",
+          "sampler": "DPM-Solver++ · 50 steps"
+        },
+        {
+          "id": "train-window-girl",
+          "title": "Girl on a train",
+          "prompt": "A detailed digital painting in the style of a realistic Japanese manga, capturing reflections in the window of a train traveling through the Tokyo suburbs. The train moves smoothly, passing through lush green fields and dense forests. Outside the window, the scenery blurs into a series of vivid colors—emerald greens, deep browns, and vibrant yellows. Inside the train, a young woman with long black hair and traditional Japanese clothing sits with a contemplative expression, gazing out the window. Her kimono is adorned with intricate patterns, and she wears a simple obi sash tied neatly. The train cabin is dimly lit, with soft shadows playing across the wooden seats. The background features a blurred yet recognizable landscape, with hints of Tokyo skyscrapers and cherry blossoms in the distance. A medium shot from a slightly tilted angle, emphasizing the reflection and the woman's serene expression. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/train-window-girl.mp4",
+          "poster": "./poster/train-window-girl.jpg",
+          "sampler": "DPM-Solver++ · 50 steps"
+        },
+        {
+          "id": "data-whale",
+          "title": "Holographic whale",
+          "prompt": "A massive, translucent whale composed of glowing blue wireframe mesh and circuitry data points glides fluidly from left to right through a futuristic cyber-metropolis at night. Skyscrapers wrapped in glowing circuit board patterns flank a centralized black monolith under a starry digital sky. The digital entity emits a soft bioluminescent cyan radiance before dissolving into a rising stream of golden particle sparks that form an ascending graph. Captured via a static wide-angle establishing shot with deep depth of field, the scene features high-contrast neon illumination with cool blue and purple tones, accented by bright golden particle emission effects and light reflections on the glossy ground plane.",
+          "video": "./video/data-whale.mp4",
+          "poster": "./poster/data-whale.jpg",
+          "sampler": "DPM-Solver++ · 50 steps"
+        },
+        {
+          "id": "beach-corgi",
+          "title": "Corgi on the beach",
+          "prompt": "A playful travel scene follows a corgi wearing dark sunglasses as it walks along the beach of a tropical island. The dog's short legs move briskly across firm wet sand, its ears standing upright while a light ocean breeze lifts the fur around its neck. Gentle turquoise waves wash onto the shore and palm trees sway above bright greenery in the background. The sunglasses catch small reflections of the water and sky as the corgi turns its head toward the camera. A low tracking medium shot moves backward at the dog's pace, combining realistic daylight, crisp fur texture, and cheerful vacation colors. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/beach-corgi.mp4",
+          "poster": "./poster/beach-corgi.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "red-balloon",
+          "title": "Red balloon",
+          "prompt": "A handheld tracking shot follows a single red balloon floating just above the ground along an abandoned city street. The balloon drifts forward in uneven pulses, its string brushing the cracked pavement as light wind guides it around scattered paper and weeds. Empty storefronts, faded signs, and parked vehicles recede into the quiet background beneath a pale overcast sky. The camera walks behind at a close distance, preserving a gentle human sway while keeping the bright balloon centered against the muted surroundings. Soft reflections travel across its glossy surface, and occasional gusts make it rise and dip without leaving the continuous deserted passage. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/red-balloon.mp4",
+          "poster": "./poster/red-balloon.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "blue-rose-dew",
+          "title": "Dew on a blue rose",
+          "prompt": "A richly detailed macro view reveals beads of morning dew resting on the curved petals of a blue rose. The droplets act like tiny lenses, reflecting pale highlights and fragments of the surrounding garden. Fine veins and velvety textures are visible across the petals, which overlap in layered shades of azure and deep blue. A faint breeze produces a barely perceptible movement, allowing the highlights to shift gently across the water. The background dissolves into soft green and golden shapes, keeping attention on the delicate flower. Natural close-up photography, shallow depth of field, and cool morning illumination create a quiet, intimate composition filled with small surface details. One larger droplet rests near a petal's edge, remaining suspended as the flower gently shifts. Its curved surface catches a brighter reflection, drawing the eye into the layered blue folds. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/blue-rose-dew.mp4",
+          "poster": "./poster/blue-rose-dew.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "upright-piano",
+          "title": "Upright piano",
+          "prompt": "An older man plays an upright piano in a dim, quiet room, illuminated by soft light entering from one side. His hands move deliberately across the keys, his shoulders sway with the rhythm, and his focused face turns slightly toward the music. The light traces his gray hair, the polished wood of the piano, and the edges of open sheet music while the far side of the room remains in warm shadow. A steady medium three-quarter shot keeps both his expression and hand movement visible. Fine cinematic texture and restrained depth of field create an intimate performance centered on subtle motion and gentle contrast. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/upright-piano.mp4",
+          "poster": "./poster/upright-piano.jpg",
+          "sampler": "DPM-Solver++ · 50 steps"
+        },
+        {
+          "id": "tv-glow",
+          "title": "Lit by the TV",
+          "prompt": "A cinematic wide portrait shows a man sitting quietly in a dim room, his face illuminated by the shifting glow of a television outside the frame. He watches intently, with small changes in his eyes and mouth suggesting an absorbed, reflective mood. Cool blue light moves gently across his cheeks and forehead, contrasting with the warm darkness of the surrounding room. The outline of an armchair, a nearby table, and a curtain remains faintly visible in the background. The camera holds a steady view with a film-like texture and restrained depth of field. His subtle breathing and an occasional blink provide the only movement apart from the changing television light. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/tv-glow.mp4",
+          "poster": "./poster/tv-glow.jpg",
+          "sampler": "DPM-Solver++ · 50 steps"
+        },
+        {
+          "id": "surfing-otter",
+          "title": "Surfing otter",
+          "prompt": "A cheerful three-dimensional animated scene features a happy otter standing confidently on a surfboard in turquoise tropical water. The otter wears a bright yellow life jacket and balances with its front paws spread as the board rides along a small curling wave. Water sprays from the rail, its whiskers flutter in the sea breeze, and its body shifts naturally to stay upright. Lush green islands and a pale sandy shoreline stretch across the distance beneath clear sunlight. A low camera travels alongside the board at water level, combining playful character animation with detailed wet fur, translucent spray, and vivid island colors. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/surfing-otter.mp4",
+          "poster": "./poster/surfing-otter.jpg",
+          "sampler": "DPM-Solver++ · 50 steps"
+        },
+        {
+          "id": "warehouse-man",
+          "title": "Man in the warehouse",
+          "prompt": "A close view of an older man standing inside a large warehouse slowly expands as the camera zooms outward. His lined face and work jacket are initially prominent, with a calm, serious gaze directed just past the lens. Steel columns, stacked crates, hanging lamps, and long rows of industrial windows gradually appear around him as the frame widens. Dust hangs in angled shafts of daylight, giving depth to the otherwise quiet interior. The man remains steady near the center while the smooth pullback reveals the scale and worn textures of the building, shifting naturally from portrait detail to a broad environmental composition. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/warehouse-man.mp4",
+          "poster": "./poster/warehouse-man.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "rainy-night-street",
+          "title": "Rainy night street",
+          "prompt": "A busy city street at night after rain, filmed with a steady tracking shot along the sidewalk. Neon signs glow in blue, pink, and red, reflecting on wet pavement while pedestrians with umbrellas move past storefronts and passing cars. The scene should feel urban and atmospheric, with realistic reflections, light haze, and continuous small motions in the crowd. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/rainy-night-street.mp4",
+          "poster": "./poster/rainy-night-street.jpg",
+          "sampler": "DPM-Solver++ · 50 steps"
+        },
+        {
+          "id": "magnolias",
+          "title": "Magnolias in a vase",
+          "prompt": "A glossy turquoise ceramic vase with a diamond-patterned texture holding fresh white magnolia blooms and green leaves sits on a mirrored nightstand. The camera moves forward steadily, gradually narrowing the field of view from the bed to the vase. A luxury hotel bedroom features soft daylight filtering through sheer curtains, illuminating a patterned carpet and abstract wall art. Captured via a static wide shot transitioning to a slow dolly-in with shallow depth of field, the subject centers in the final frame while the bed anchors the left third. Soft natural window light creates cool tones and gentle reflections on glass and ceramic surfaces.",
+          "video": "./video/magnolias.mp4",
+          "poster": "./poster/magnolias.jpg",
+          "sampler": "DPM-Solver++ · 50 steps"
+        },
+        {
+          "id": "stage-dancer",
+          "title": "Dancer on stage",
+          "prompt": "A dancer spins on a theater stage under purple and blue spotlights, with flowing fabric tracing arcs through the air. The camera circles slowly as the dancer turns, arms extending and costume catching the light. The stage remains dark except for beams of colored light and faint haze, giving the motion a graceful, performance-like quality. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/stage-dancer.mp4",
+          "poster": "./poster/stage-dancer.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "wolf-falls",
+          "title": "Wolf by the falls",
+          "prompt": "A majestic, old wolf creature is depicted sitting on a rock at the edge of a colossal, rainbow-colored waterfall. The central figure is a large wolf with thick, grizzled white fur, showing hints of gray and black, suggesting its advanced age. Its intelligent eyes possess a subtle, inner luminescence, and its posture is one of serene authority, with its head held high and its powerful form relaxed. It sits upon a large, dark, moss-covered boulder that juts out over the abyss, its surface weathered and cracked with age. In the background, the breathtaking waterfall dominates the composition, cascading down a sheer cliff face for 20 miles and stretching across the entire horizon. The old wolf lifts its head and lets its thick fur ripple in the spray as the rainbow waterfall pours continuously into the abyss. The camera circles the mossy boulder in a wide cinematic move while luminous mist and drifting droplets refract shifting colors.",
+          "video": "./video/wolf-falls.mp4",
+          "poster": "./poster/wolf-falls.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "pencil-plan",
+          "title": "Drawing a floor plan",
+          "prompt": "A close overhead view shows a sharpened pencil drawing an architectural plan across a clean sheet of drafting paper. The graphite tip moves in precise straight lines, adds measured curves, and builds walls, windows, stairs, and dimension marks one section at a time. A human hand guides the pencil beside a ruler while fine graphite dust gathers near the darker strokes. Rolled plans, an eraser, and metal drafting tools sit at the edge of the table in soft focus. Cool studio light reveals the paper fibers and changing pressure of the marks. The steady camera emphasizes the deliberate construction of the design from blank page to detailed floor plan. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/pencil-plan.mp4",
+          "poster": "./poster/pencil-plan.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "alley-tsunami",
+          "title": "Tsunami in an old alley",
+          "prompt": "A powerful tsunami surges through a narrow old alley in Bulgaria. The first wall of water turns into churning white foam as it strikes stone steps, wooden doors, and closely spaced plaster buildings. Loose chairs and small debris are swept forward while balconies and tiled roofs remain visible above the rising current. The camera retreats quickly at street level, keeping the advancing water centered as it fills the passage and reflects the cool daylight. Dynamic spray, physically detailed turbulence, and the tight historic architecture emphasize the force and scale of the flood while the continuous backward motion preserves a clear view of the event. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/alley-tsunami.mp4",
+          "poster": "./poster/alley-tsunami.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "chrome-bull",
+          "title": "Chrome bull robot",
+          "prompt": "A massive humanoid robot featuring polished chrome plating, intricate mechanical joints, and curved horns on its helmet stands stoically still. Its optical sensors emit a piercing red glow, contrasting with the reflective silver surfaces. The scene is set in a desolate, rocky terrain under a dramatic twilight sky, featuring scattered geometric debris and a setting sun on the horizon. Captured via a dynamic low-angle dolly-in shot starting from a wide view and pushing forward to a tight close-up of the robot's face, the subject is centered in the frame with a low horizon line. Warm sunset backlighting creates high-contrast rim lighting on the metal, with deep shadows and lens flares, while reflections shift across the metallic surface and dust particles float in the air.",
+          "video": "./video/chrome-bull.mp4",
+          "poster": "./poster/chrome-bull.jpg",
+          "sampler": "DPM-Solver++ · 50 steps"
+        },
+        {
+          "id": "step-printed-runner",
+          "title": "Step-printed runner",
+          "prompt": "A cinematic step-printing sequence shows a lone runner moving across a broad city sidewalk. Each stride leaves a brief layered echo of the runner's body, creating a rhythmic stuttering trail while the forward motion remains easy to follow. The runner's coat and hair lift slightly with each step, and passing streetlights stretch into soft streaks behind the repeated silhouettes. Grain, muted contrast, and occasional exposure flicker give the image the tactile character of 35mm film. A side-on tracking shot holds the runner near the center of the frame as the pavement and storefronts slide steadily past. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/step-printed-runner.mp4",
+          "poster": "./poster/step-printed-runner.jpg",
+          "sampler": "DPM-Solver++ · 50 steps"
+        },
+        {
+          "id": "art-gallery",
+          "title": "Art gallery tour",
+          "prompt": "A dynamic and lively tour through an art gallery, showcasing a diverse array of beautiful works in various styles. The gallery is filled with paintings, sculptures, and installations, each piece telling its own story. One section features impressionistic landscapes with soft brushstrokes and vibrant colors, capturing serene lakes and rolling hills. Nearby, there are realistic portraits with intricate details and lifelike expressions. In another corner, abstract artworks with bold colors and geometric shapes create a sense of movement and energy. The gallery itself has a modern, open design with high ceilings and large windows allowing natural light to flood in. Visitors move gracefully through the space, pausing occasionally to admire the works. The camera captures the gallery from multiple angles—wide shots of the entire room, close-ups of individual pieces, and sweeping pans to show the flow of visitors. The overall atmosphere is one of inspiration and wonder. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/art-gallery.mp4",
+          "poster": "./poster/art-gallery.jpg",
+          "sampler": "DPM-Solver++ · 50 steps"
+        },
+        {
+          "id": "panda-guitar",
+          "title": "Panda with a guitar",
+          "prompt": "A whimsical wildlife scene features a giant panda sitting comfortably in a leafy clearing and playing a wooden guitar. Its rounded black paws rest against the strings and neck, making small, deliberate strumming movements while its head sways gently with the rhythm. Bamboo stems and broad green leaves surround the clearing, with scattered sunlight falling across the instrument's warm brown surface. The background is softly blurred, emphasizing the contrast between the panda's thick fur and the polished guitar. A steady medium shot from a slightly low angle captures the playful, peaceful performance in natural afternoon light. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/panda-guitar.mp4",
+          "poster": "./poster/panda-guitar.jpg",
+          "sampler": "DPM-Solver++ · 50 steps"
+        },
+        {
+          "id": "hidden-library",
+          "title": "Door to a hidden library",
+          "prompt": "An old-fashioned, dark wooden door with tarnished brass fittings stands slightly ajar in the foreground, serving as an entrance to a secret study. This room is enveloped by a dense, overgrown indoor jungle, with large, waxy green leaves of monstera and ferns snaking across the dark hardwood floor and climbing the weathered walls. Through the entryway, the study reveals itself as a scholarly yet wild space, dominated in the background by floor-to-ceiling bookshelves overflowing with vintage, leather-bound tomes. Interspersed among the books and hanging on the walls are numerous taxidermied birds, including a large eagle with its wings partially unfurled and a raven perched on a shelf. The old wooden door creaks farther open as broad jungle leaves sway aside, revealing drifting dust, overflowing bookshelves, and a lamp flickering deep inside the secret study. The camera moves cautiously through the doorway in one continuous forward shot.",
+          "video": "./video/hidden-library.mp4",
+          "poster": "./poster/hidden-library.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "big-sur",
+          "title": "Big Sur coastline",
+          "prompt": "A drone view of waves crashing against the rugged cliffs along Big Sur’s Garay Point beach. The crashing blue waters create white-tipped waves, while the golden light of the setting sun illuminates the rocky shore, casting long shadows. In the distance, a small island with a lighthouse stands tall, its beam piercing the twilight. Green shrubbery covers the cliff’s edge, and the steep drop from the road down to the beach is a dramatic feat, with the cliff’s edges jutting out over the sea. The camera angle provides a bird's-eye view, capturing the raw beauty of the coast and the rugged landscape of the Pacific Coast Highway. The scene is bathed in a warm, golden hue, highlighting the textures and details of the rocky terrain. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/big-sur.mp4",
+          "poster": "./poster/big-sur.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "dolphin-ballet",
+          "title": "Dolphin ballerina",
+          "prompt": "An anthropomorphic dolphin stands gracefully on its hind flippers, the central figure in an underwater performance within a fantastical coral reef theater. The dolphin, characterized by sleek gray skin and expressive, large eyes, is poised elegantly for a ballet routine, with one flippers held high in a delicate curve and the other extended for balance. It wears a frilly, multi-layered pink tutu made of delicate tulle that fans out around its waist, adding to its graceful appearance. In the foreground and surrounding the performance area, a packed audience of diverse sea creatures is gathered; some are large octopuses with tentacles attentively watching, while others are schools of smaller fish swaying in the water current. The anthropomorphic dolphin performs a fluid underwater pirouette, extending its flippers as the pink tutu billows and streams of bubbles rise around it. The camera orbits smoothly at medium distance while coral fronds sway and colored stage lights ripple through the water.",
+          "video": "./video/dolphin-ballet.mp4",
+          "poster": "./poster/dolphin-ballet.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "snowy-tokyo-anime",
+          "title": "Snowy Tokyo in watercolor",
+          "prompt": "A dynamic and vibrant anime illustration in a flowing watercolor style, capturing the bustling snowy streets of Tokyo. The camera moves smoothly through the city, following several people joyfully enjoying the snow and shopping at nearby stalls. Gorgeous sakura petals dance through the air, swirling with snowflakes. The scene features traditional Japanese architecture, with shops and lanterns illuminated by the soft winter light. People are bundled up in warm coats and scarves, their faces lit with smiles. The background shows blurred, snowy rooftops and distant cherry blossom trees, creating a serene yet lively atmosphere. A medium shot with a sweeping camera motion, highlighting the natural movement of both people and petals. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/snowy-tokyo-anime.mp4",
+          "poster": "./poster/snowy-tokyo-anime.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "ant-nest",
+          "title": "Ant leaving the nest",
+          "prompt": "An extreme macro shot watches a single ant emerge from a small opening in a sunlit earthen nest. Its antennae test the air, its legs grip loose grains of soil, and it climbs onto the crest of the tiny mound. The camera then pulls steadily backward, revealing grass around the nest, a broad hillside, and finally a quiet neighborhood of houses and streets beyond. The ant remains aligned near the center as its apparent scale diminishes through the expanding view. Warm daylight, crisp surface detail, and a continuous controlled pullback connect the insect's minute world to the much larger human landscape in one clear visual reveal. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/ant-nest.mp4",
+          "poster": "./poster/ant-nest.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "chick-farm",
+          "title": "Chicks on the farm",
+          "prompt": "A group of parents dressed in mid-20th century 50s clothing are gathered in a sunlit farm yard, attending to a flock of small baby chicks. In the foreground, a man kneels on the dusty ground, his face gentle as he feeds one of the tiny, fluffy yellow chicks he holds in his cupped hands. He wears a well-worn blue denim work shirt with the sleeves rolled to his elbows and a red-and-white checkered flannel shirt underneath, paired with dark denim jeans and brown leather boots. To his right, a woman standing on her knees leans over a crate of eggs, carefully placing another chick into its nest made of woven reeds and straw. The kneeling man opens his hands as the chick pecks gently, nearby chicks hurry across the dusty yard, and the woman scatters feed with a smile. The camera glides low around the family while denim folds, feathers, and airborne dust move in warm sunlight.",
+          "video": "./video/chick-farm.mp4",
+          "poster": "./poster/chick-farm.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "neon-tokyo",
+          "title": "Neon Tokyo",
+          "prompt": "A stylish woman strolls down a bustling Tokyo street, the warm glow of neon lights and animated city signs casting vibrant reflections. She wears a sleek black leather jacket paired with a flowing red dress and black boots, her black purse slung over her shoulder. Sunglasses perched on her nose and a bold red lipstick add to her confident, casual demeanor. The street is damp and reflective, creating a mirror-like effect that enhances the colorful lights and shadows. Pedestrians move about, adding to the lively atmosphere. The scene is captured in a dynamic medium shot with the woman walking slightly to one side, highlighting her graceful strides. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/neon-tokyo.mp4",
+          "poster": "./poster/neon-tokyo.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "seasons-bicycle",
+          "title": "Cycling through the seasons",
+          "prompt": "A lively, colorful scene shows a little boy riding his bicycle along a garden path as the surrounding seasons change. He pedals at a steady pace, holding the handlebars with an eager expression while the camera follows alongside him. Autumn leaves give way to a light covering of snow, then fresh spring blossoms appear before the garden settles into rich summer greenery. Flower beds, a low fence, and familiar trees provide recognizable shapes throughout the scene. Soft, bright lighting and detailed, gently stylized textures create a cheerful atmosphere, with the continuous cycling movement connecting the seasonal transformation. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/seasons-bicycle.mp4",
+          "poster": "./poster/seasons-bicycle.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "flame-wisp",
+          "title": "Flame wisp at the night market",
+          "prompt": "A close fantasy shot follows a living flame wisp darting through a bustling night market. The small floating creature has a bright golden core and trailing tongues of orange fire that bend with every quick change in direction. It slips between hanging fabrics, baskets of spices, and surprised shoppers, casting warm moving highlights across their faces and the wet stone street. Lanterns and painted signs create layers of color behind it while sparks dissolve harmlessly in the air. A nimble tracking camera stays near the wisp's height, keeping its fluid motion sharp as the crowded market blurs around the glowing figure. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/flame-wisp.mp4",
+          "poster": "./poster/flame-wisp.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "train-reflection",
+          "title": "Reflection on a bullet train",
+          "prompt": "A futuristic cinematic scene observes the subtle reflection of a woman in the window of a train moving at extraordinary speed through a Japanese city. Her calm profile remains faintly visible in the glass while neon signs, elevated tracks, and dense buildings stretch into colorful horizontal trails beyond her. Small changes in her eyes and posture contrast with the rapid motion outside. Interior lights briefly overlap her reflected face as the train passes through alternating bright districts and darker structures. A close three-quarter view holds the window and reflection steady, using cool night tones, controlled motion blur, and sharp facial detail to create an introspective sense of velocity. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/train-reflection.mp4",
+          "poster": "./poster/train-reflection.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "gym-bench",
+          "title": "Alone in the gym",
+          "prompt": "A controlled zoom-in begins with a young woman sitting alone on a bench in the middle of an empty school gymnasium. Painted court lines, folded bleachers, and high windows establish the large quiet space around her. As the camera moves closer, her hands resting together and her thoughtful expression become more visible, while the distant walls soften into a gentle blur. Cool daylight spreads across the polished floor and creates a faint reflection beneath the bench. The centered composition and steady forward camera movement preserve the symmetry of the gym while gradually turning the wide architectural scene into an intimate portrait of the seated woman. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/gym-bench.mp4",
+          "poster": "./poster/gym-bench.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "neon-robot",
+          "title": "Robot in a neon city",
+          "prompt": "A cyberpunk-style illustration depicting a lone robot navigating a neon-lit cityscape. The robot stands tall with sleek, metallic armor, adorned with blinking lights and wires. Its eyes, glowing with a deep blue hue, scan the surroundings with curiosity. The background features towering skyscrapers, holographic advertisements, and crowded streets filled with various cyborgs and humans. The air is thick with smoke and the hum of technology. A medium shot from a high-angle perspective, capturing both the robot and the bustling city environment. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/neon-robot.mp4",
+          "poster": "./poster/neon-robot.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "mushrooms",
+          "title": "Forest mushrooms",
+          "prompt": "The scene features a cluster of delicate, white mushrooms with smooth, glossy caps and thin, white stems. The mushrooms are growing in a close, orderly group from a decaying tree trunk, which is covered in patches of vibrant green moss. The background is a lush, out-of-focus display of various shades of green, indicating a dense forest setting. The lighting is soft and diffused, suggesting either an overcast sky or a shaded area within the forest. The scene is sharp and clear, capturing the intricate textures of the mushrooms and the moss, as well as the rough, cracked surface of the tree trunk. The overall composition emphasizes the natural beauty and serene atmosphere of the woodland environment. A light forest breeze gently bends the slender stems while moisture beads slide across the translucent caps and nearby moss trembles. The camera performs a slow macro dolly-in with shallow depth of field as soft green bokeh shifts behind the cluster.",
+          "video": "./video/mushrooms.mp4",
+          "poster": "./poster/mushrooms.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "chopping-onions",
+          "title": "Chopping onions",
+          "prompt": "A realistic kitchen close-up shows a chef steadily chopping onions on a thick wooden cutting board. One hand guides a polished knife in a controlled rocking motion while the other holds the onion safely in place with curled fingers. Thin slices separate and gather beside the blade, catching small highlights from the overhead light. Stainless-steel bowls, herbs, and a warm stove glow remain softly blurred in the background. The camera holds a close three-quarter angle at counter height, emphasizing the repeated knife movement, translucent onion layers, and subtle moisture on the board. Natural culinary detail gives the preparation a focused, professional rhythm. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/chopping-onions.mp4",
+          "poster": "./poster/chopping-onions.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "birthday-cake",
+          "title": "Grandma’s birthday",
+          "prompt": "A warm family celebration centers on a grandmother with neatly combed gray hair standing behind a colorful birthday cake at a wooden dining table. Wearing a light blue floral blouse, she leans forward with a joyful expression and gently blows across the many flickering candles. The flames bend, dim, and go out in sequence while thin curls of smoke rise above the pink frosting and sprinkles. Friends and relatives remain visible in a soft background blur, smiling and leaning toward her. A steady three-quarter medium shot and warm household lighting emphasize the happy glow in her eyes, the cake's texture, and the intimate dining room atmosphere. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/birthday-cake.mp4",
+          "poster": "./poster/birthday-cake.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "latte-art",
+          "title": "Latte art",
+          "prompt": "A polished cafe close-up follows a barista preparing a cappuccino in a white ceramic cup. A thin stream of steamed milk enters the dark espresso, and the barista gently moves the pitcher to form a symmetrical leaf pattern across the surface. Fine foam spreads to the rim while faint steam curls upward in the warm morning light. The cup rests on a dark wooden counter beside a small spoon and scattered coffee beans, with the espresso machine softly blurred behind it. A steady overhead three-quarter view keeps the evolving latte art centered and reveals the glossy crema, velvety foam, and precise pouring motion in realistic detail. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/latte-art.mp4",
+          "poster": "./poster/latte-art.jpg",
+          "sampler": "DPM-Solver++ · 50 steps"
+        },
+        {
+          "id": "golden-retriever",
+          "title": "Golden retriever in the wind",
+          "prompt": "A golden retriever sits attentively in the center of a wide, open field under a bright, clear sky. The dog is positioned facing slightly towards the viewer with its head turned to look forward, its expression calm and content. Its fur is a rich, golden-tan color, and its dark brown eyes are focused. Wrapped snugly around its neck is a soft, knitted red scarf, the texture of which contrasts with the smooth fur of the dog. In the foreground and middle ground, the dog is surrounded by a field of lush green grass, dotted with small, yellow wildflowers. The background shows the field stretching into the distance, where it blurs softly, suggesting depth. The golden retriever turns toward the wind, pants softly, and wags its tail while the knitted red scarf lifts and settles against its fur. The camera pushes in across the grass at chest height as seed heads sway beneath the bright sky.",
+          "video": "./video/golden-retriever.mp4",
+          "poster": "./poster/golden-retriever.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "chameleon",
+          "title": "Chameleon",
+          "prompt": "A naturalistic wildlife close-up shows a chameleon resting along a slender branch, its textured skin slowly shifting through subtle shades of green and yellow. Tiny scales catch the soft daylight, revealing delicate patterns across its curved back and narrow face. One eye turns gradually while its small feet maintain a firm grip on the bark. A steady close camera angle and shallow depth of field emphasize the fine skin texture, quiet breathing, and slight movement of its head. Small leaves sway gently nearby. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/chameleon.mp4",
+          "poster": "./poster/chameleon.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "cobblestone-village",
+          "title": "Cobblestone village",
+          "prompt": "A sun-drenched, narrow cobblestone street winds through a picturesque European-style village, leading the viewer's eye towards a central, prominent town hall. In the foreground, the cobblestone path is detailed, with individual stones showing variations in color from gray to earthy brown, set in a slightly uneven manner with small tufts of moss growing in the crevices. Lining both sides of the street are quaint, two-story wooden houses, each showcasing a unique architectural style; one house on the left features a steeply pitched, dark thatched roof and exposed dark wood beams, while a house on the right has a whitewashed facade, a vibrant red flower box overflowing with pink petunias, and a slightly slanted roof. Laundry and flower baskets move lightly in the breeze as villagers cross the cobblestone street and birds circle above the town hall. The camera glides steadily forward at walking height, following the winding street and revealing layered wooden facades in warm sunlight.",
+          "video": "./video/cobblestone-village.mp4",
+          "poster": "./poster/cobblestone-village.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "cheeseburger-bite",
+          "title": "Cheeseburger bite",
+          "prompt": "A candid restaurant scene shows a Chinese boy wearing glasses enjoying a large cheeseburger at a fast-food table. He lifts the burger with both hands, takes a satisfying bite, and closes his eyes with a delighted expression as the layers compress slightly. Warm cheese, lettuce, and sauce remain clearly visible, while a tray of fries and a paper cup rest beside him. Bright restaurant signs and other diners form a colorful but softly blurred background. A steady medium close-up from across the table keeps his face and the food prominent, using warm practical lighting and natural skin detail to convey a simple moment of pleasure. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/cheeseburger-bite.mp4",
+          "poster": "./poster/cheeseburger-bite.jpg",
+          "sampler": "DPM-Solver++ · 50 steps"
+        },
+        {
+          "id": "watercolor-market",
+          "title": "Watercolor market",
+          "prompt": "A flowing watercolor-style scene takes the viewer through a bustling market with a gently moving handheld camera. The viewpoint weaves between closely arranged stalls, passing baskets of produce, hanging fabrics, and bright awnings that cast patterned shadows on the walkway. Shoppers move through the gaps, pausing to examine goods while vendors gesture toward their displays. The camera's subtle sway creates the feeling of walking among the crowd without abrupt changes in direction. Warm daylight illuminates the painted textures, and softer colors blend into the busy background. A medium-wide perspective preserves the layered street activity and the lively movement of people, fabric, and light throughout the continuous passage. Fine brush textures remain visible across the sunlit walls and awnings. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/watercolor-market.mp4",
+          "poster": "./poster/watercolor-market.jpg",
+          "sampler": "DPM-Solver++ · 50 steps"
+        },
+        {
+          "id": "locomotive-cab",
+          "title": "Locomotive through the old city",
+          "prompt": "A first-person view from inside an old locomotive cab shows a train moving at impossible speed through a historic European city. Brass controls, dark gauges, and the edge of the driver's window remain stable in the foreground while stone buildings, bridges, and narrow streets stretch into rapid motion outside. The tracks curve between close facades, sending changing bands of sunlight across the worn metal interior. Steam and faint vibration reinforce the mechanical force of the journey. A wide forward-facing camera preserves the cab's tactile detail and the rushing urban perspective, combining vintage railway atmosphere with smooth, high-speed cinematic movement. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/locomotive-cab.mp4",
+          "poster": "./poster/locomotive-cab.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "burano-dalmatian",
+          "title": "Dalmatian in Burano",
+          "prompt": "A colorful, painterly view faces the canal-side buildings of Burano, Italy, their bright facades reflected softly in the water. An attentive Dalmatian peers through an open ground-floor window, its spotted head turning slightly as people pass outside. Pedestrians stroll along the canal street while a cyclist rolls through the foreground, adding gentle movement to the picturesque setting. Window shutters, small flower boxes, and textured plaster walls provide intricate architectural detail. The scene has the soft edges and luminous colors of a carefully rendered travel illustration, with warm daylight spreading across the buildings. A steady medium-wide composition keeps the dog visible while allowing the everyday activity along the canal to unfold naturally. Bright reflections quiver along the canal wall as the cyclist passes. Small details in the painted shutters and worn paving stones give the picturesque street a lived-in, welcoming character. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/burano-dalmatian.mp4",
+          "poster": "./poster/burano-dalmatian.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "eye-marrakech",
+          "title": "Eye at magic hour",
+          "prompt": "A cinematic film shot in 70mm, capturing an extreme close-up of a 24-year-old woman's eye as it blinks. The scene takes place during magic hour in Marrakech, with the vibrant colors of the setting sun casting warm hues over the bustling streets. The depth of field emphasizes the intricate details of her almond-shaped eyes, which reflect the lively atmosphere of the city. Her eyes, framed by long, dark lashes, are set against a backdrop of bustling market stalls, ornate architecture, and the soft shadows of the setting sun. The background features a blend of rich textures and vibrant colors, creating a sense of depth and immersion. A medium shot with a slightly elevated perspective, highlighting the natural movement of her eye. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/eye-marrakech.mp4",
+          "poster": "./poster/eye-marrakech.jpg",
+          "sampler": "UniPC · 35 steps · ckpt 130711"
+        },
+        {
+          "id": "dance-break",
+          "title": "Dance break",
+          "prompt": "A young woman with deep brown skin, visible freckles, and long dreadlocks wears a white ribbed cotton tank top. She initially smiles broadly and steadily, then abruptly raises her arms overhead to dance rhythmically with fluid motion. Captured via a static medium close-up shot with shallow depth of field, the subject remains centered in the frame against a dark studio space. The lighting shifts to a dual-tone aesthetic with cool blue rim light on the left and warm red fill light on the right. Dreadlocks swing with momentum as her shoulders rise and fall, and the fabric stretches slightly during arm movement.",
+          "video": "./video/dance-break.mp4",
+          "poster": "./poster/dance-break.jpg",
+          "sampler": "DPM-Solver++ · 50 steps"
+        },
+        {
+          "id": "rio-astronaut",
+          "title": "Astronaut in Rio",
+          "prompt": "A vibrant animated scene follows an astronaut running through a narrow alley in Rio de Janeiro. The white spacesuit bounces with each stride, and the rounded helmet reflects flashes of brightly painted walls as the figure moves forward. Sunlight cuts across the passage in sharp bands, alternating with cool pockets of shadow beneath the overhanging buildings. The camera tracks the astronaut from a slightly elevated rear angle, emphasizing the unusual contrast between the bulky suit and the lively urban setting. Fluid character motion and detailed, hand-painted textures give the scene an energetic, adventurous quality. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/rio-astronaut.mp4",
+          "poster": "./poster/rio-astronaut.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "coffee-volcano",
+          "title": "Volcano in a coffee cup",
+          "prompt": "A surreal macro scene reveals a tiny volcano erupting from the center of a ceramic coffee cup. Dark roasted liquid circles the miniature cone while a glowing stream of lava spills down its textured sides and meets the coffee with wisps of steam. The crater releases a brief plume of ash and orange sparks that rise above the rim without leaving the tightly framed tabletop scene. A spoon and folded napkin sit nearby in soft morning light, grounding the impossible event in an ordinary cafe setting. The camera remains close and steady, capturing the contrast between glossy coffee, rough volcanic rock, glowing lava, and delicate vapor. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/coffee-volcano.mp4",
+          "poster": "./poster/coffee-volcano.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "underwater-suburb",
+          "title": "Underwater suburb",
+          "prompt": "A fast first-person camera flies through the colorful coral-lined streets of an underwater suburban neighborhood. Rounded homes, garden fences, and lamp posts are integrated into reefs covered with orange, violet, and green coral. Schools of small fish scatter ahead of the camera while sea plants bend in the current along the sidewalks. Sunbeams filter down through clear blue water, casting moving patterns across doorways and sandy roads. The camera follows a smooth forward path between houses, banking gently around corners without a cut. Detailed aquatic textures, floating particles, and the familiar neighborhood layout create a vivid balance between playful fantasy and realistic underwater motion. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/underwater-suburb.mp4",
+          "poster": "./poster/underwater-suburb.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "fox-at-dawn",
+          "title": "Fox at dawn",
+          "prompt": "A fox walks carefully through a quiet forest clearing at dawn, with low fog floating near the ground. The camera follows from a respectful distance as the fox steps between moss, leaves, and thin shafts of sunlight. Its ears twitch, tail sways, and breath is faintly visible in the cool air, creating a natural wildlife-documentary mood. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/fox-at-dawn.mp4",
+          "poster": "./poster/fox-at-dawn.jpg",
+          "sampler": "UniPC · 35 steps"
+        }
+      ]
+    },
+    {
+      "id": "t2v-192",
+      "title": "Text-to-video · 320×192 · 96 frames · 24 fps · 4 s",
+      "aspect": "320 / 192",
+      "examples": [
+        {
+          "id": "lr-portrait",
+          "title": "Side-lit portrait",
+          "prompt": "A close portrait shows a woman illuminated by a single soft light from the side. One half of her face carries warm detail while the other falls into gentle shadow, and small changes in her eyes and breathing give the still pose a natural presence. The camera slowly pulls backward to reveal her seated beside a tall studio window in a quiet, sparsely furnished room. Curtains, a wooden chair, and muted wall textures gradually enter the composition without distracting from her expression. Restrained color, shallow depth of field, and smooth camera movement create an intimate cinematic portrait that expands into a balanced environmental view. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/lr-portrait.mp4",
+          "poster": "./poster/lr-portrait.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "lr-cloak",
+          "title": "Rising cloak",
+          "prompt": "An aerial cinematic view reveals a cloaked figure rising slowly into the sky between tall modern skyscrapers. The dark fabric hangs downward and ripples in the wind while the figure ascends past glass facades that reflect clouds and late-afternoon light. Streets and moving vehicles become smaller far below, emphasizing the increasing height. The camera circles gently around the floating figure, maintaining a wide view of the surrounding towers and open sky. Realistic architectural detail, soft atmospheric haze, and the controlled vertical movement create a mysterious sense of scale without obscuring the human silhouette at the center of the city. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/lr-cloak.mp4",
+          "poster": "./poster/lr-cloak.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "lr-candle-monster",
+          "title": "Monster and candle",
+          "prompt": "A close-up 3D animated scene of a short, fluffy monster kneeling beside a melting red candle. The monster has large, wide eyes and an open mouth, gazing at the flame with a look of wonder and curiosity. Its soft, fluffy fur contrasts with the warm, dramatic lighting that highlights every detail of its gentle, innocent expression. The pose conveys a sense of playfulness and exploration, as if the creature is discovering the world for the first time. The background features a cozy, warmly lit room with subtle hints of a fireplace and soft furnishings, enhancing the overall atmosphere. The use of warm colors and dramatic lighting creates a captivating and inviting scene. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/lr-candle-monster.mp4",
+          "poster": "./poster/lr-candle-monster.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "lr-autumn-forest",
+          "title": "Autumn forest",
+          "prompt": "A richly textured oil painting depicts a natural forest filled with brilliant maple trees in red, orange, gold, and deep green. The painted scene comes alive through gentle cinematic parallax: foreground leaves drift past more quickly while layered trunks, distant slopes, and soft sky move at slower depths. A narrow path leads into the composition, and flecks of painted sunlight shift across the visible brushstrokes as the camera advances. Subtle movement in the leaves preserves the handmade surface rather than turning it photorealistic. A slow forward glide and warm autumn illumination create a dimensional, contemplative journey through the colorful painted woodland. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/lr-autumn-forest.mp4",
+          "poster": "./poster/lr-autumn-forest.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "lr-warehouse-bloom",
+          "title": "Warehouse in bloom",
+          "prompt": "An empty warehouse slowly fills with flowers blooming directly through cracks in the concrete floor. Small green shoots first appear between worn slabs, then stems rise and blossoms open in spreading groups of white, yellow, pink, and violet. The growth moves gradually across the interior rather than exploding all at once, surrounding old columns and abandoned equipment while leaving their industrial forms visible. Sunlight enters through high dusty windows and catches drifting pollen above the new garden. A wide stationary camera emphasizes the patient transformation, preserving realistic concrete textures, delicate petal movement, and the quiet contrast between decay and renewed life. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/lr-warehouse-bloom.mp4",
+          "poster": "./poster/lr-warehouse-bloom.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "lr-rabbit-news",
+          "title": "Rabbit reading the newspaper",
+          "prompt": "A whimsical storybook scene features a rabbit wearing round glasses and reading a folded newspaper at a small outdoor cafe table. The rabbit sits upright in a tiny jacket, adjusts the paper with its front paws, and tilts its head as though studying an important article. Its ears make small attentive movements while a cup of tea sends up a thin thread of steam. Potted flowers, cobblestones, and a quiet village storefront fill the softly painted background. A steady medium shot at table height keeps the rabbit's expressive face, printed pages, and careful paw movements clear. Gentle morning light and finely textured illustration give the scene a warm, believable charm. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/lr-rabbit-news.mp4",
+          "poster": "./poster/lr-rabbit-news.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "lr-sunflower",
+          "title": "Sunflower by the window",
+          "prompt": "A stop motion animation in a charming hand-drawn style, depicting a flower slowly growing out of the windowsill of a suburban house. The flower is a vibrant sunflower, with its petals unfurling gracefully. The windowsill is adorned with small potted plants and a few scattered books. The house has a cozy exterior, with a red door and white shutters, and the surrounding area features neatly trimmed bushes and a small garden path. The animation captures the natural growth process, with the sunflower stem bending slightly as it stretches upward. A close-up shot from a low angle, emphasizing the delicate details of the flower's growth. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/lr-sunflower.mp4",
+          "poster": "./poster/lr-sunflower.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "lr-blue-parrot",
+          "title": "Blue parrot feathers",
+          "prompt": "An extreme close-up reveals the brilliant blue feathers of a parrot glittering as the bird turns slowly in the light. Individual barbs overlap in dense layers of cobalt, turquoise, and deep indigo, with tiny highlights traveling across their curved surfaces. A portion of the parrot's eye and beak enters the frame as its head shifts, bringing new feather patterns into focus. The distant foliage becomes a smooth, dark green blur that separates the luminous plumage from the background. A steady macro camera and shallow depth of field emphasize fine texture, subtle breathing, and the changing iridescent color without distracting movement. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/lr-blue-parrot.mp4",
+          "poster": "./poster/lr-blue-parrot.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "lr-flower-bed",
+          "title": "Flowers opening",
+          "prompt": "A detailed time-lapse view shows a cluster of flowers blooming in a quiet garden bed. Closed buds gradually loosen, petals unfold in layered spirals, and stems straighten toward the light while small leaves turn outward around them. Pink, yellow, violet, and white blossoms open at slightly different speeds, creating a gentle wave of movement across the frame. Dark soil and beads of morning moisture remain visible beneath the plants, while the distant garden dissolves into soft green shapes. A steady close composition and natural sunrise illumination reveal delicate veins, shifting shadows, and subtle color changes throughout the continuous bloom. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/lr-flower-bed.mp4",
+          "poster": "./poster/lr-flower-bed.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "lr-rainy-drive",
+          "title": "Driving in the rain",
+          "prompt": "A softly illustrated cinematic close-up shows a young woman driving a car through a rainy landscape. Her expression is thoughtful, with her eyes directed toward the road and her hands making small, controlled adjustments to the steering wheel. Droplets cling to the side window, catching pale daylight as blurred green forest passes beyond the glass. The interior is quiet and subdued, with soft shadows shaping her face and the folds of her jacket. A gentle three-quarter view from the passenger side keeps her profile prominent while the rain-streaked window fills the background. Delicate, comic-like linework and restrained colors create an intimate mood, emphasizing the contrast between her still concentration and the moving scenery. A faint reflection of her cheek appears in the wet glass, briefly overlapping the passing trees as she continues to watch the road ahead. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/lr-rainy-drive.mp4",
+          "poster": "./poster/lr-rainy-drive.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "lr-octopus-crab",
+          "title": "Octopus and crab",
+          "prompt": "A wide-angle underwater photograph captures a large orange octopus resting on the ocean floor, its tentacles spread out around its body and eyes closed. The octopus blends seamlessly with the sandy and rocky terrain. Behind a rock, a brown and spiny king crab is crawling towards it, its claws raised and ready to strike. The crab has long legs and antennae, adding to its menacing appearance. The scene is set in a clear, blue ocean with rays of sunlight filtering through, creating a vivid contrast. The photo is sharp and crisp, with a high dynamic range, emphasizing the octopus and the crab in focus while the background is slightly blurred, enhancing the sense of depth. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/lr-octopus-crab.mp4",
+          "poster": "./poster/lr-octopus-crab.jpg",
+          "sampler": "UniPC · 35 steps"
+        },
+        {
+          "id": "lr-plastic-chair",
+          "title": "Excavating a plastic chair",
+          "prompt": "A cinematic archaeological scene unfolds in a sunlit desert, where researchers carefully excavate an ordinary plastic chair as though it were a precious ancient discovery. One archaeologist kneels beside the exposed seat, sweeping sand away with a small brush, while another gently clears the chair's legs with a hand tool. Their dusty sleeves, worn hats, and concentrated expressions contrast humorously with the familiar molded object. Shallow excavation marks and neatly arranged tools occupy the foreground, with pale dunes stretching toward a hazy horizon. Golden light emphasizes the gritty sand and smooth, weathered plastic. A medium shot moves slowly alongside the excavation, keeping the careful brushing action clearly visible. Fine airborne dust drifts through the bright afternoon air. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/lr-plastic-chair.mp4",
+          "poster": "./poster/lr-plastic-chair.jpg",
+          "sampler": "UniPC · 35 steps"
+        }
+      ]
+    },
+    {
+      "id": "limitations",
+      "mount": "limitations-gallery",
+      "aspect": "832 / 464",
+      "examples": [
+        {
+          "id": "wolf-pups",
+          "title": "Wolf pups on the road",
+          "prompt": "A naturalistic wildlife scene captures five gray wolf pups frolicking along a remote gravel road bordered by tall grass. The pups sprint in short bursts, leap across the path, and playfully nip at one another before changing direction again. Fine dust rises beneath their paws while their gray coats ripple with the energetic movement. Low hills and sparse woodland recede into a softly blurred background under clear afternoon light. A low tracking camera follows beside the group, keeping all five pups visible while emphasizing their quick turns, curious faces, and loose, youthful coordination. Realistic detail and restrained colors preserve the feeling of an observed wild moment. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/wolf-pups.mp4",
+          "poster": "./poster/wolf-pups.jpg",
+          "sampler": "DPM-Solver++ · 50 steps",
+          "note": "As the pups overlap, their bodies merge and split, so their number keeps changing; a roadside sign also appears out of nowhere."
+        },
+        {
+          "id": "snow-puppies",
+          "title": "Puppies in the snow",
+          "prompt": "A playful winter scene follows a litter of golden retriever puppies bounding through deep, powdery snow. Their small heads pop up between soft drifts as they tumble, paw at one another, and shake loose flakes from their warm golden fur. One puppy pushes forward toward the camera while the others weave behind it, leaving uneven tracks across the white surface. Snow-covered shrubs and distant pines form a quiet background beneath pale morning light. A low, gently tracking medium shot stays close to the puppies' eye level, preserving their lively expressions and the texture of snow clinging to their ears and noses. The video is 4 seconds long and is of 24 FPS.",
+          "video": "./video/snow-puppies.mp4",
+          "poster": "./poster/snow-puppies.jpg",
+          "sampler": "DPM-Solver++ · 50 steps",
+          "note": "Puppies fuse together where they overlap, and the litter shrinks to two by the end of the clip."
+        }
+      ]
+    }
+  ]
+}

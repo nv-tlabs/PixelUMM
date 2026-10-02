@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>PixelUMM: Encoder-Free Unified Image and Video Understanding and Generation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&family=Inter:wght@400;500;600;700&family=Roboto:wght@300;400&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./styles.css?v=26">
+  <script src="./app.js?v=9" type="module"></script>
+</head>
+<body>
+  <main>
+    <header class="paper-header">
+      <h1 id="paper-title">
+        <span class="visually-hidden">PixelUMM: </span>
+        <svg class="title-logo" viewBox="0 0 39 7" aria-hidden="true" focusable="false"><g class="px-ink"><rect x="0.04" y="0.04" width="0.92" height="0.92" rx="0.14"/><rect x="1.04" y="0.04" width="0.92" height="0.92" rx="0.14"/><rect x="2.04" y="0.04" width="0.92" height="0.92" rx="0.14"/><rect x="3.04" y="0.04" width="0.92" height="0.92" rx="0.14"/><rect x="0.04" y="1.04" width="0.92" height="0.92" rx="0.14"/><rect x="4.04" y="1.04" width="0.92" height="0.92" rx="0.14"/><rect x="0.04" y="2.04" width="0.92" height="0.92" rx="0.14"/><rect x="4.04" y="2.04" width="0.92" height="0.92" rx="0.14"/><rect x="0.04" y="3.04" width="0.92" height="0.92" rx="0.14"/><rect x="1.04" y="3.04" width="0.92" height="0.92" rx="0.14"/><rect x="2.04" y="3.04" width="0.92" height="0.92" rx="0.14"/><rect x="3.04" y="3.04" width="0.92" height="0.92" rx="0.14"/><rect x="0.04" y="4.04" width="0.92" height="0.92" rx="0.14"/><rect x="0.04" y="5.04" width="0.92" height="0.92" rx="0.14"/><rect x="0.04" y="6.04" width="0.92" height="0.92" rx="0.14"/><rect x="6.04" y="0.04" width="0.92" height="0.92" rx="0.14"/><rect x="6.04" y="2.04" width="0.92" height="0.92" rx="0.14"/><rect x="6.04" y="3.04" width="0.92" height="0.92" rx="0.14"/><rect x="6.04" y="4.04" width="0.92" height="0.92" rx="0.14"/><rect x="6.04" y="5.04" width="0.92" height="0.92" rx="0.14"/><rect x="6.04" y="6.04" width="0.92" height="0.92" rx="0.14"/><rect x="8.04" y="2.04" width="0.92" height="0.92" rx="0.14"/><rect x="12.04" y="2.04" width="0.92" height="0.92" rx="0.14"/><rect x="9.04" y="3.04" width="0.92" height="0.92" rx="0.14"/><rect x="11.04" y="3.04" width="0.92" height="0.92" rx="0.14"/><rect x="10.04" y="4.04" width="0.92" height="0.92" rx="0.14"/><rect x="9.04" y="5.04" width="0.92" height="0.92" rx="0.14"/><rect x="11.04" y="5.04" width="0.92" height="0.92" rx="0.14"/><rect x="8.04" y="6.04" width="0.92" height="0.92" rx="0.14"/><rect x="12.04" y="6.04" width="0.92" height="0.92" rx="0.14"/><rect x="15.04" y="2.04" width="0.92" height="0.92" rx="0.14"/><rect x="16.04" y="2.04" width="0.92" height="0.92" rx="0.14"/><rect x="17.04" y="2.04" width="0.92" height="0.92" rx="0.14"/><rect x="14.04" y="3.04" width="0.92" height="0.92" rx="0.14"/><rect x="18.04" y="3.04" width="0.92" height="0.92" rx="0.14"/><rect x="14.04" y="4.04" width="0.92" height="0.92" rx="0.14"/><rect x="15.04" y="4.04" width="0.92" height="0.92" rx="0.14"/><rect x="16.04" y="4.04" width="0.92" height="0.92" rx="0.14"/><rect x="17.04" y="4.04" width="0.92" height="0.92" rx="0.14"/><rect x="18.04" y="4.04" width="0.92" height="0.92" rx="0.14"/><rect x="14.04" y="5.04" width="0.92" height="0.92" rx="0.14"/><rect x="15.04" y="6.04" width="0.92" height="0.92" rx="0.14"/><rect x="16.04" y="6.04" width="0.92" height="0.92" rx="0.14"/><rect x="17.04" y="6.04" width="0.92" height="0.92" rx="0.14"/><rect x="18.04" y="6.04" width="0.92" height="0.92" rx="0.14"/><rect x="20.04" y="0.04" width="0.92" height="0.92" rx="0.14"/><rect x="20.04" y="1.04" width="0.92" height="0.92" rx="0.14"/><rect x="20.04" y="2.04" width="0.92" height="0.92" rx="0.14"/><rect x="20.04" y="3.04" width="0.92" height="0.92" rx="0.14"/><rect x="20.04" y="4.04" width="0.92" height="0.92" rx="0.14"/><rect x="20.04" y="5.04" width="0.92" height="0.92" rx="0.14"/><rect x="20.04" y="6.04" width="0.92" height="0.92" rx="0.14"/></g><g class="px-accent"><rect x="22.04" y="0.04" width="0.92" height="0.92" rx="0.14"/><rect x="26.04" y="0.04" width="0.92" height="0.92" rx="0.14"/><rect x="22.04" y="1.04" width="0.92" height="0.92" rx="0.14"/><rect x="26.04" y="1.04" width="0.92" height="0.92" rx="0.14"/><rect x="22.04" y="2.04" width="0.92" height="0.92" rx="0.14"/><rect x="26.04" y="2.04" width="0.92" height="0.92" rx="0.14"/><rect x="22.04" y="3.04" width="0.92" height="0.92" rx="0.14"/><rect x="26.04" y="3.04" width="0.92" height="0.92" rx="0.14"/><rect x="22.04" y="4.04" width="0.92" height="0.92" rx="0.14"/><rect x="26.04" y="4.04" width="0.92" height="0.92" rx="0.14"/><rect x="22.04" y="5.04" width="0.92" height="0.92" rx="0.14"/><rect x="26.04" y="5.04" width="0.92" height="0.92" rx="0.14"/><rect x="23.04" y="6.04" width="0.92" height="0.92" rx="0.14"/><rect x="24.04" y="6.04" width="0.92" height="0.92" rx="0.14"/><rect x="25.04" y="6.04" width="0.92" height="0.92" rx="0.14"/><rect x="28.04" y="0.04" width="0.92" height="0.92" rx="0.14"/><rect x="32.04" y="0.04" width="0.92" height="0.92" rx="0.14"/><rect x="28.04" y="1.04" width="0.92" height="0.92" rx="0.14"/><rect x="29.04" y="1.04" width="0.92" height="0.92" rx="0.14"/><rect x="31.04" y="1.04" width="0.92" height="0.92" rx="0.14"/><rect x="32.04" y="1.04" width="0.92" height="0.92" rx="0.14"/><rect x="28.04" y="2.04" width="0.92" height="0.92" rx="0.14"/><rect x="30.04" y="2.04" width="0.92" height="0.92" rx="0.14"/><rect x="32.04" y="2.04" width="0.92" height="0.92" rx="0.14"/><rect x="28.04" y="3.04" width="0.92" height="0.92" rx="0.14"/><rect x="30.04" y="3.04" width="0.92" height="0.92" rx="0.14"/><rect x="32.04" y="3.04" width="0.92" height="0.92" rx="0.14"/><rect x="28.04" y="4.04" width="0.92" height="0.92" rx="0.14"/><rect x="32.04" y="4.04" width="0.92" height="0.92" rx="0.14"/><rect x="28.04" y="5.04" width="0.92" height="0.92" rx="0.14"/><rect x="32.04" y="5.04" width="0.92" height="0.92" rx="0.14"/><rect x="28.04" y="6.04" width="0.92" height="0.92" rx="0.14"/><rect x="32.04" y="6.04" width="0.92" height="0.92" rx="0.14"/><rect x="34.04" y="0.04" width="0.92" height="0.92" rx="0.14"/><rect x="38.04" y="0.04" width="0.92" height="0.92" rx="0.14"/><rect x="34.04" y="1.04" width="0.92" height="0.92" rx="0.14"/><rect x="35.04" y="1.04" width="0.92" height="0.92" rx="0.14"/><rect x="37.04" y="1.04" width="0.92" height="0.92" rx="0.14"/><rect x="38.04" y="1.04" width="0.92" height="0.92" rx="0.14"/><rect x="34.04" y="2.04" width="0.92" height="0.92" rx="0.14"/><rect x="36.04" y="2.04" width="0.92" height="0.92" rx="0.14"/><rect x="38.04" y="2.04" width="0.92" height="0.92" rx="0.14"/><rect x="34.04" y="3.04" width="0.92" height="0.92" rx="0.14"/><rect x="36.04" y="3.04" width="0.92" height="0.92" rx="0.14"/><rect x="38.04" y="3.04" width="0.92" height="0.92" rx="0.14"/><rect x="34.04" y="4.04" width="0.92" height="0.92" rx="0.14"/><rect x="38.04" y="4.04" width="0.92" height="0.92" rx="0.14"/><rect x="34.04" y="5.04" width="0.92" height="0.92" rx="0.14"/><rect x="38.04" y="5.04" width="0.92" height="0.92" rx="0.14"/><rect x="34.04" y="6.04" width="0.92" height="0.92" rx="0.14"/><rect x="38.04" y="6.04" width="0.92" height="0.92" rx="0.14"/></g></svg>
+        <span class="title-sub"><span class="title-line">Encoder-Free Unified Image and Video</span> <span class="title-line">Understanding and Generation</span></span>
+      </h1>
+      <div id="paper-authors" class="authors" aria-label="Paper authors">
+        <span class="author"><a href="https://congwei1230.github.io/" target="_blank" rel="noopener noreferrer">Cong Wei</a><sup>1,2</sup></span>
+        <span class="author"><a href="https://xuanchiren.com/" target="_blank" rel="noopener noreferrer">Xuanchi Ren</a><sup>1</sup></span>
+        <span class="author"><span class="author-name">Bryan Chu</span><sup>1</sup></span>
+        <span class="author"><a href="https://cs.uwaterloo.ca/~w2ren/" target="_blank" rel="noopener noreferrer">Weiming Ren</a><sup>2</sup></span>
+        <span class="author"><a href="https://www.cs.toronto.edu/~linghuan/" target="_blank" rel="noopener noreferrer">Huan Ling</a><sup>1</sup></span>
+        <span class="author"><a href="https://huangjh-pub.github.io/" target="_blank" rel="noopener noreferrer">Jiahui Huang</a><sup>1</sup></span>
+        <span class="author"><a href="https://dvl.in.tum.de/team/lealtaixe/" target="_blank" rel="noopener noreferrer">Laura Leal-Taixé</a><sup>1</sup></span>
+        <span class="author"><a href="https://www.cs.toronto.edu/~fidler/" target="_blank" rel="noopener noreferrer">Sanja Fidler</a><sup>1</sup></span>
+        <span class="author"><a href="https://wenhuchen.github.io/" target="_blank" rel="noopener noreferrer">Wenhu Chen</a><sup>2</sup></span>
+        <span class="author"><a href="https://www.cs.toronto.edu/~zianwang/" target="_blank" rel="noopener noreferrer">Zian Wang</a><sup>1</sup></span>
+        <span class="author"><a href="https://zhangjiewu.github.io/" target="_blank" rel="noopener noreferrer">Jay Zhangjie Wu</a><sup>1</sup></span>
+      </div>
+      <p class="affiliations"><span class="aff-item"><span class="aff-marker">1</span>NVIDIA</span><span class="aff-item"><span class="aff-marker">2</span>University of Waterloo</span></p>
+      <nav class="paper-links" aria-label="Paper links">
+        <a class="paper-link" href="https://arxiv.org/abs/2609.38597" target="_blank" rel="noopener noreferrer"><span class="paper-link-icon"><i class="ai ai-arxiv" aria-hidden="true"></i></span><span>arXiv</span></a>
+        <a class="paper-link" href="https://huggingface.co/papers/2609.38597" target="_blank" rel="noopener noreferrer"><span class="paper-link-icon" aria-hidden="true">&#129303;</span><span>HF Paper</span></a>
+        <a class="paper-link" href="https://github.com/nv-tlabs/PixelUMM" target="_blank" rel="noopener noreferrer"><span class="paper-link-icon"><svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></span><span>Code</span></a>
+        <a class="paper-link" href="https://huggingface.co/nvidia/PixelUMM" target="_blank" rel="noopener noreferrer"><span class="paper-link-icon" aria-hidden="true">&#129303;</span><span>Model</span></a>
+      </nav>
+    </header>
+
+    <section id="overview" class="section" aria-labelledby="overview-title">
+      <h2 id="overview-title">Overview</h2>
+      <p class="lede">
+        PixelUMM reads and writes raw pixels with a single decoder-only Transformer&nbsp;— no VAE and no vision encoder.
+        Images become 16×16&nbsp;patches and videos become 4-frame&nbsp;tubes; a Qwen3-8B&nbsp;backbone with separate
+        understanding and generation experts shares one self-attention across text, clean pixels, and noisy pixels.
+      </p>
+      <figure class="overview-figure">
+        <video id="overview-video" src="./media/overview.mp4?v=30s-e" poster="./media/overview.jpg?v=30s-e"
+               autoplay muted loop playsinline controls preload="auto"
+               aria-label="Animated overview of the PixelUMM architecture"></video>
+        <figcaption>Architecture overview. The answer text shown for the understanding branch is illustrative.</figcaption>
+      </figure>
+    </section>
+
+    <div id="examples">
+      <p class="gallery-error" id="gallery-error" hidden>Videos could not be loaded. Please reload the page.</p>
+    </div>
+
+    <section id="findings" class="section findings" aria-labelledby="findings-title">
+      <div class="section-head">
+        <h2 id="findings-title">Empirical findings</h2>
+        <p class="section-meta">Eight experiment families · F1–F8</p>
+      </div>
+      <p class="findings-intro">The ablations behind PixelUMM are grouped into eight experiment families, F1–F8, with configurations numbered R01, R02, and so on. We start with patch artifacts, the most visible failure mode of a linear pixel head.</p>
+
+      <article class="finding finding-featured" id="f3" aria-labelledby="f3-title">
+        <header class="finding-head"><span class="finding-id">F3</span><h3 id="f3-title">Patch artifacts</h3></header>
+        <p>With the linear pixel decoder, generated images and videos can show faint grid-aligned intensity steps in smooth, low-texture regions such as sky. As also observed in MiniT2I, these patch artifacts become more pronounced at high classifier-free guidance, around CFG&nbsp;6.</p>
+        <figure class="finding-figure">
+            <a href="findings/f3-linear-head-artifacts.webp?v=2" target="_blank" rel="noopener"><img src="findings/f3-linear-head-artifacts.webp?v=2" width="1834" height="1150" loading="lazy" decoding="async" alt="Crops of a smooth sky in a generated image and of the smooth wall behind a pianist in a generated video frame, showing faint 16-pixel grid boundaries"></a>
+            <figcaption>Linear pixel heads (F3-R01). Left: a generated image above a crop of its smooth sky. Right: frame 0 of the <a href="#examples">Upright piano</a> video above a crop of the smooth wall behind the pianist. Open the figure to view it at full resolution.</figcaption>
+          </figure>
+        <p class="finding-note finding-alert" role="note"><strong>Note that</strong> the released checkpoint, the benchmarked model and all online demos, including every video on this page, are generated with the default linear output heads, because switching from a linear to a convolutional head requires further training.</p>
+
+        <h4>Three convolutional video heads</h4>
+        <p>Each head replaces <code>video_linear_outproj</code>, is initialized from Gen Stage&nbsp;1, and maps the Transformer’s <span class="nowrap">T/4 × H/16 × W/16</span> hidden grid back to <span class="nowrap">T × H × W</span> RGB video.</p>
+        <div class="table-wrap">
+          <table class="finding-table text-col2">
+            <thead><tr><th>Run</th><th>Output head</th><th>GFLOPs<sup>*</sup></th><th>Params</th></tr></thead>
+            <tbody>
+              <tr><td>F3-R01</td><td>Linear (baseline)</td><td>133</td><td>12.6M</td></tr>
+              <tr><td>F3-R02</td><td>Wan-style upsample + conv</td><td>2,274 <span class="muted">(17.1×)</span></td><td>18.3M <span class="muted">(1.5×)</span></td></tr>
+              <tr><td>F3-R03</td><td>PixelShuffle, temporal-first (T-S)</td><td>1,279 <span class="muted">(9.6×)</span></td><td>52.9M <span class="muted">(4.2×)</span></td></tr>
+              <tr><td>F3-R04</td><td>PixelShuffle, spatial-first (S-T)</td><td>747 <span class="muted">(5.6×)</span></td><td>15.1M <span class="muted">(1.2×)</span></td></tr>
+            </tbody>
+          </table>
+          <p class="table-note"><sup>*</sup>Convolution-only forward cost for one 96×176×320 clip.</p>
+        </div>
+        <figure class="finding-figure finding-figure-narrow">
+            <a href="findings/f3-decoder-architectures.webp" target="_blank" rel="noopener"><img src="findings/f3-decoder-architectures.webp" width="1800" height="1233" loading="lazy" decoding="async" alt="Block diagrams of the three convolutional video output heads"></a>
+            <figcaption>The three convolutional output heads. T-Conv and S-Conv denote 3×1×1 temporal and 1×3×3 spatial convolutions.</figcaption>
+          </figure>
+
+        <h4>What the heads trade off</h4>
+        <ul class="finding-list">
+          <li><strong>Training loss.</strong> Both PixelShuffle heads converge to a T2V pixel-flow loss near 0.02, while the Wan-style head stays above 0.05.</li>
+          <li><strong>Boundary probe.</strong> Across 72 evaluation prompts, measured on pre-clamp float32 outputs, the linear head shows the largest elevations at 16-pixel patch boundaries (1.078) and 4-frame tubelet boundaries (1.160). The Wan-style head sits near the normalized baseline; the PixelShuffle heads leave smaller residual elevations.</li>
+          <li><strong>Generated video.</strong> The Wan-style head gives the cleanest boundaries but blurrier outputs. PixelShuffle offers the better trade-off, with temporal-first (F3-R03) slightly ahead of spatial-first (F3-R04).</li>
+        </ul>
+        <div class="fig-pair">
+          <figure class="finding-figure">
+            <a href="findings/f3-decoder-loss.webp" target="_blank" rel="noopener"><img src="findings/f3-decoder-loss.webp" width="1800" height="852" loading="lazy" decoding="async" alt="Raw T2V training loss curves for the three convolutional heads"></a>
+            <figcaption>Raw T2V pixel-flow loss for F3-R02, F3-R03 and F3-R04, without smoothing.</figcaption>
+          </figure>
+          <figure class="finding-figure">
+            <a href="findings/f3-boundary-probe.webp" target="_blank" rel="noopener"><img src="findings/f3-boundary-probe.webp" width="1800" height="641" loading="lazy" decoding="async" alt="Bar charts of spatial and temporal boundary elevation per output head"></a>
+            <figcaption>Spatial (16-pixel) and temporal (4-frame) boundary probes; mean ± SEM over 72 prompts.</figcaption>
+          </figure>
+        </div>
+        <figure class="finding-figure">
+            <a href="findings/f3-decoder-heads-qualitative.webp" target="_blank" rel="noopener"><img src="findings/f3-decoder-heads-qualitative.webp" width="2400" height="1518" loading="lazy" decoding="async" alt="The same prompt generated with each output head, with a fixed crop shown at frames 0, 32, 64 and 95"></a>
+            <figcaption>Same prompt, one row per output head. The red box marks a fixed crop, shown at frames 0, 32, 64 and 95 of the 96-frame video (lossless frames captured before video encoding).</figcaption>
+          </figure>
+        <p class="takeaway"><strong>Takeaway</strong>Convolutional heads reduce patch artifacts. PixelShuffle offers a better trade-off between training loss and artifact suppression than the upsampling-and-convolution head.</p>
+        <p class="finding-note finding-alert finding-alert-end" role="note"><strong>Note that</strong> the released checkpoint, the benchmarked model and all online demos, including every video on this page, are generated with the default linear output heads, because switching from a linear to a convolutional head requires further training.</p>
+      </article>
+      <div class="finding-grid">
+        <article class="finding finding-card" id="f1" aria-labelledby="f1-title">
+          <header class="finding-head"><span class="finding-id">F1</span><h3 id="f1-title">Image patch size</h3></header>
+          <p>16×16 (F1-R01) and 32×32 (F1-R02) patches differ only in the generation input projection and output head. With the same sequence-length budget, 32×32 fits four times as many images per step, yet 16×16 keeps a lower T2I training loss throughout late training.</p>
+          <figure class="finding-figure">
+            <a href="findings/f1-image-patch-size-loss.webp" target="_blank" rel="noopener"><img src="findings/f1-image-patch-size-loss.webp" width="1600" height="547" loading="lazy" decoding="async" alt="T2I training loss for 16×16 and 32×32 image patches"></a>
+            <figcaption>T2I pixel-flow MSE: full trajectory (left) and 10K–15K zoom-in (right).</figcaption>
+          </figure>
+          <p class="takeaway"><strong>Takeaway</strong>Stronger spatial compression makes image generation harder to learn.</p>
+        </article>
+        <article class="finding finding-card" id="f2" aria-labelledby="f2-title">
+          <header class="finding-head"><span class="finding-id">F2</span><h3 id="f2-title">Video patch size</h3></header>
+          <p>Four tubelet-to-token mappings: p32/t4, p32/t2, p16/t4 and p32/t1 (spatial patch / frames per token). Less aggressive spatiotemporal compression generally gives lower T2V loss, with p32/t1 the lowest. The final model uses p16/t4 to match the compression of common video VAEs such as Wan2.2.</p>
+          <figure class="finding-figure">
+            <a href="findings/f2-video-patch-size-loss.webp" target="_blank" rel="noopener"><img src="findings/f2-video-patch-size-loss.webp" width="1600" height="685" loading="lazy" decoding="async" alt="T2V training loss for four video patch configurations"></a>
+            <figcaption>T2V MSE over 0–68K steps (left) and 40K–68K (right).</figcaption>
+          </figure>
+          <p class="takeaway"><strong>Takeaway</strong>Compression ranges from 1,024 to 4,096 pixels per video token; stronger compression makes video generation harder to learn.</p>
+        </article>
+        <article class="finding finding-card" id="f4" aria-labelledby="f4-title">
+          <header class="finding-head"><span class="finding-id">F4</span><h3 id="f4-title">Pixel-space vs. VAE-space training</h3></header>
+          <p>A 32×32 pixel-patch run with x-prediction (F4-R01) against a frozen Wan2.2 VAE with 2×2 latent patchification and v-prediction (F4-R02), at the same effective token stride. At 10K steps the VAE-space loss is about 4.3× the pixel-space loss, but because the two losses live in different spaces, this does not show that pixel space learns faster.</p>
+          <figure class="finding-figure">
+            <a href="findings/f4-pixel-vs-vae.webp" target="_blank" rel="noopener"><img src="findings/f4-pixel-vs-vae.webp" width="1600" height="620" loading="lazy" decoding="async" alt="Pixel-space and VAE-space loss and gradient-norm curves"></a>
+            <figcaption>Left: T2I velocity MSE in pixel and VAE space. Right: pre-clip global gradient norm.</figcaption>
+          </figure>
+          <p class="takeaway"><strong>Takeaway</strong>Gradient norms are nearly equal; pixel-space training shows occasional loss spikes.</p>
+        </article>
+        <article class="finding finding-card" id="f5" aria-labelledby="f5-title">
+          <header class="finding-head"><span class="finding-id">F5</span><h3 id="f5-title">Model size</h3></header>
+          <p>1.7B (F5-R01) and 8B (F5-R02) models with the same recipe and a global batch size of 256. The 8B model reaches MSE 0.060 at about 14K instead of 40K steps, and CE 0.50 at about 10K instead of 31K steps.</p>
+          <figure class="finding-figure">
+            <a href="findings/f5-model-size.webp?v=2" target="_blank" rel="noopener"><img src="findings/f5-model-size.webp?v=2" width="1600" height="540" loading="lazy" decoding="async" alt="MSE and CE loss curves for the 1.7B and 8B models"></a>
+            <figcaption>Joint Stage 1 MSE (left) and CE (right).</figcaption>
+          </figure>
+          <p class="takeaway"><strong>Takeaway</strong>The 8B model reaches comparable generation and text losses in roughly one third of the training steps.</p>
+        </article>
+        <article class="finding finding-card" id="f6" aria-labelledby="f6-title">
+          <header class="finding-head"><span class="finding-id">F6</span><h3 id="f6-title">Compute scaling</h3></header>
+          <p>The same 1.7B model and matched recipe on 8 GPUs (F6-R01) versus 128 GPUs (F6-R02). With more GPUs, CE reaches 1.0 at about 2K instead of 17.5K steps (≈9× fewer), while MSE reaches 0.065 at about 17K instead of 23K steps (≈1.3× fewer). These are steps to a fixed loss, not wall-clock speedups.</p>
+          <figure class="finding-figure">
+            <a href="findings/f6-compute-scaling.webp?v=2" target="_blank" rel="noopener"><img src="findings/f6-compute-scaling.webp?v=2" width="1600" height="540" loading="lazy" decoding="async" alt="MSE and CE loss curves for 8 and 128 GPUs"></a>
+            <figcaption>MSE (left) and CE (right); opaque curves are EMAs of the raw measurements.</figcaption>
+          </figure>
+          <p class="takeaway"><strong>Takeaway</strong>More GPUs speed up text (CE) convergence far more than generation (MSE) convergence.</p>
+        </article>
+        <article class="finding finding-card" id="f7" aria-labelledby="f7-title">
+          <header class="finding-head"><span class="finding-id">F7</span><h3 id="f7-title">Multimodal context conditioning</h3></header>
+          <p>Clean conditions (text, reference images, an input video) enter the understanding expert, noisy target tokens enter the generation expert, and both meet in shared self-attention. This extends SenseNova-U1’s encoder-free image conditioning to image-to-video and video editing, with no separate VAE-token stream. After 15K steps of multi-task fine-tuning on eight tasks, image understanding moves both ways (BLINK +2.37, CV-Bench +2.27, SEED-I −5.41), while all four video benchmarks improve by 0.89–3.49 points.</p>
+          <figure class="finding-figure">
+            <a href="findings/f7-context-conditioning.webp" target="_blank" rel="noopener"><img src="findings/f7-context-conditioning.webp" width="2000" height="679" loading="lazy" decoding="async" alt="Diagram of interleaved text, image and video conditions routed through the understanding expert"></a>
+            <figcaption>Interleaved visual-context conditioning.</figcaption>
+          </figure>
+          <figure class="finding-figure">
+            <a href="findings/f7-image-to-video.webp" target="_blank" rel="noopener"><img src="findings/f7-image-to-video.webp" width="1800" height="306" loading="lazy" decoding="async" alt="A first-frame condition followed by three frames of the generated video"></a>
+            <figcaption>Image-to-video: the clean first frame, then frames 0, 47 and 95 of the generated clip.</figcaption>
+          </figure>
+          <p class="takeaway"><strong>Takeaway</strong>Clean visual conditions can be routed through the understanding expert without systematically degrading understanding.</p>
+        </article>
+        <article class="finding finding-card finding-wide" id="f8" aria-labelledby="f8-title">
+          <header class="finding-head"><span class="finding-id">F8</span><h3 id="f8-title">Video understanding interfaces</h3></header>
+          <p><code>dense_mode</code> samples at 4&nbsp;FPS and forms 4-frame tubelets; <code>sparse_mode</code> samples at 1&nbsp;FPS and projects frames independently. Both use the same 448² per-frame budget. At F8-R01 (Und Stage&nbsp;3, 9K steps):</p>
+          <div class="table-wrap">
+            <table class="finding-table">
+              <thead><tr><th>Interface</th><th>MVBench</th><th>Video-MME</th><th>LongVideoBench</th><th>LVBench</th></tr></thead>
+              <tbody>
+                <tr><td><code>sparse_mode</code></td><td>71.15</td><td>57.89</td><td>59.39</td><td>41.38</td></tr>
+                <tr><td><code>dense_mode</code></td><td>71.22</td><td>57.67</td><td>58.71</td><td>41.38</td></tr>
+                <tr class="delta"><td>Δ</td><td class="pos">+0.07</td><td class="neg">−0.22</td><td class="neg">−0.68</td><td>0.00</td></tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <p class="takeaway"><strong>Takeaway</strong>4-FPS tubelet input performs comparably to 1-FPS frame input.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="benchmarks" class="section benchmarks" aria-labelledby="benchmarks-title">
+      <div class="section-head">
+        <h2 id="benchmarks-title">Understanding benchmarks</h2>
+      </div>
+      <p class="bench-intro">The released PixelUMM checkpoint, compared with unified models and vision-language models (VLMs). Its overall performance is comparable to the baselines. Since training data differ across models, these results cannot establish which architecture is superior or which model converges faster. Dark and light green mark the best and second-best result in each row.</p>
+
+      <h3 class="bench-title">Image understanding</h3>
+      <div class="table-wrap">
+        <table class="bench-table" aria-label="Image understanding benchmarks">
+          <thead>
+            <tr class="bench-groups"><th></th><th colspan="4" class="u">Unified models</th><th colspan="5">VLMs</th></tr>
+            <tr><th scope="col">Benchmark</th><th scope="col" class="u">PixelUMM<span>8B MoT</span></th><th scope="col" class="u">BAGEL<span>7B MoT</span></th><th scope="col" class="u">TUNA<span>7B+5B</span></th><th scope="col" class="u">TUNA-2<span>7B+5B</span></th><th scope="col">Qwen2.5-VL<span>7B</span></th><th scope="col">LLaVA-OV-1.5<span>8B</span></th><th scope="col">LLaVA-OV-2<span>8B</span></th><th scope="col">Qwen3-VL-Inst.<span>8B</span></th><th scope="col">NEO-ov<span>8B</span></th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">MMMU</th><td class="u ours">41.67</td><td class="u">55.30</td><td class="u">49.80</td><td class="u">50.70</td><td>51.30</td><td>55.40</td><td class="na">–</td><td class="best">69.60</td><td class="second">68.10</td></tr>
+            <tr><th scope="row">MMStar</th><td class="u ours">53.99</td><td class="u na">–</td><td class="u">61.20</td><td class="u na">–</td><td>62.50</td><td class="second">67.70</td><td>64.30</td><td class="best">70.90</td><td>67.30</td></tr>
+            <tr><th scope="row">RWQA</th><td class="u ours second">71.63</td><td class="u best">72.80</td><td class="u">66.10</td><td class="u">67.70</td><td>68.50</td><td>68.10</td><td>69.70</td><td>71.50</td><td>67.80</td></tr>
+            <tr><th scope="row">SEED-I</th><td class="u ours">70.39</td><td class="u na">–</td><td class="u">74.70</td><td class="u na">–</td><td class="best">77.50</td><td class="second">77.30</td><td class="na">–</td><td class="na">–</td><td>76.60</td></tr>
+            <tr><th scope="row">AI2D</th><td class="u ours">80.12</td><td class="u best">89.20</td><td class="u">79.30</td><td class="u">79.60</td><td>82.60</td><td>84.20</td><td>84.30</td><td class="second">85.70</td><td>85.40</td></tr>
+            <tr><th scope="row">DocVQA</th><td class="u ours">90.42</td><td class="u na">–</td><td class="u na">–</td><td class="u na">–</td><td>94.90</td><td>95.00</td><td class="second">95.20</td><td class="best">96.10</td><td>91.90</td></tr>
+            <tr><th scope="row">ChartQA</th><td class="u ours">82.96</td><td class="u">78.50</td><td class="u">85.80</td><td class="u">85.60</td><td>84.10</td><td class="second">86.50</td><td>85.90</td><td class="best">89.60</td><td>86.20</td></tr>
+            <tr><th scope="row">InfoVQA</th><td class="u ours">63.67</td><td class="u na">–</td><td class="u na">–</td><td class="u na">–</td><td class="second">81.70</td><td>78.40</td><td>74.40</td><td class="best">83.10</td><td class="na">–</td></tr>
+            <tr><th scope="row">TextVQA</th><td class="u ours second">78.76</td><td class="u na">–</td><td class="u na">–</td><td class="u na">–</td><td class="best">84.90</td><td class="na">–</td><td class="na">–</td><td class="na">–</td><td>78.50</td></tr>
+            <tr><th scope="row">OCRBench</th><td class="u ours">78.00</td><td class="u">73.30</td><td class="u">74.30</td><td class="u">79.70</td><td class="second">84.20</td><td>82.90</td><td>78.20</td><td class="best">89.60</td><td>81.60</td></tr>
+            <tr><th scope="row">MME</th><td class="u ours">1809.54</td><td class="u best">2388.00</td><td class="u na">–</td><td class="u na">–</td><td class="second">2347.00</td><td class="na">–</td><td class="na">–</td><td class="na">–</td><td class="na">–</td></tr>
+            <tr><th scope="row">GQA</th><td class="u ours">61.90</td><td class="u best">66.40</td><td class="u">63.90</td><td class="u second">65.00</td><td>60.70</td><td class="na">–</td><td class="na">–</td><td class="na">–</td><td class="na">–</td></tr>
+            <tr><th scope="row">MMVP</th><td class="u ours second">80.33</td><td class="u best">85.00</td><td class="u">70.70</td><td class="u">77.30</td><td>78.00</td><td class="na">–</td><td class="na">–</td><td class="na">–</td><td class="na">–</td></tr>
+            <tr><th scope="row">SEED2+</th><td class="u ours">64.51</td><td class="u best">71.90</td><td class="u">52.70</td><td class="u">61.10</td><td class="second">70.90</td><td>69.20</td><td class="na">–</td><td class="na">–</td><td class="na">–</td></tr>
+            <tr><th scope="row">CV-Bench</th><td class="u ours">77.60</td><td class="u na">–</td><td class="u na">–</td><td class="u na">–</td><td class="second">80.00</td><td class="best">80.70</td><td class="na">–</td><td class="na">–</td><td class="na">–</td></tr>
+            <tr><th scope="row">CountBench</th><td class="u ours best">94.30</td><td class="u">82.50</td><td class="u">73.50</td><td class="u">81.70</td><td>86.40</td><td>88.20</td><td>89.00</td><td class="second">89.80</td><td class="na">–</td></tr>
+            <tr><th scope="row">PixMo-Count</th><td class="u ours best">73.03</td><td class="u na">–</td><td class="u na">–</td><td class="u na">–</td><td>63.30</td><td>62.20</td><td class="second">64.00</td><td>62.40</td><td class="na">–</td></tr>
+            <tr><th scope="row">V<sup>*</sup></th><td class="u ours">76.96</td><td class="u">70.20</td><td class="u">52.40</td><td class="u">59.20</td><td>77.00</td><td>78.00</td><td class="best">85.90</td><td class="second">85.30</td><td class="na">–</td></tr>
+            <tr><th scope="row">MMMU-Pro</th><td class="u ours">27.63</td><td class="u na">–</td><td class="u na">–</td><td class="u na">–</td><td class="second">36.30</td><td class="best">37.40</td><td class="na">–</td><td class="na">–</td><td class="na">–</td></tr>
+            <tr><th scope="row">BLINK</th><td class="u ours">53.46</td><td class="u na">–</td><td class="u na">–</td><td class="u na">–</td><td>56.40</td><td>48.30</td><td class="second">63.50</td><td class="best">69.10</td><td>62.80</td></tr>
+            <tr><th scope="row">MuirBench</th><td class="u ours">38.31</td><td class="u na">–</td><td class="u na">–</td><td class="u na">–</td><td class="second">59.60</td><td class="na">–</td><td class="na">–</td><td class="best">64.40</td><td>58.20</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="bench-caption">PixelUMM is evaluated with the official LMMS-Eval protocol (64,750 generations over 21 tasks).</p>
+
+      <h3 class="bench-title">Video understanding</h3>
+      <div class="table-wrap">
+        <table class="bench-table" aria-label="Video understanding benchmarks">
+          <thead>
+            <tr class="bench-groups"><th></th><th colspan="4" class="u">Unified models</th><th colspan="6">VLMs</th></tr>
+            <tr><th scope="col">Benchmark</th><th scope="col" class="u">PixelUMM<span>8B MoT</span></th><th scope="col" class="u">Show-o2<span>1.5B+0.5B</span></th><th scope="col" class="u">TUNA<span>1.5B+?</span></th><th scope="col" class="u">Lance<span>3B MoT</span></th><th scope="col">LLaVA-OV-2<span>8B</span></th><th scope="col">Qwen3-VL<span>8B</span></th><th scope="col">Keye-VL-1.5<span>8B</span></th><th scope="col">InternVL-3.5<span>8B</span></th><th scope="col">PLM<span>8B</span></th><th scope="col">LLaVA-OV-1.5<span>8B</span></th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">MVBench</th><td class="u ours">70.53</td><td class="u">49.80</td><td class="u">54.40</td><td class="u">62.00</td><td>66.20</td><td>69.00</td><td>56.90</td><td class="second">72.10</td><td class="best">77.10</td><td>51.20</td></tr>
+            <tr><th scope="row">Video-MME (w/o sub.)</th><td class="u ours">57.33</td><td class="u">48.00</td><td class="u">49.10</td><td class="u na">–</td><td class="second">71.90</td><td>71.40</td><td class="best">73.00</td><td>65.90</td><td>60.50</td><td>61.10</td></tr>
+            <tr><th scope="row">LongVideoBench</th><td class="u ours">59.61</td><td class="u">49.20</td><td class="u">49.70</td><td class="u na">–</td><td class="second">66.90</td><td class="best">68.00</td><td>66.00</td><td>62.40</td><td>59.60</td><td>56.20</td></tr>
+            <tr><th scope="row">LVBench</th><td class="u ours">40.41</td><td class="u na">–</td><td class="u">27.40</td><td class="u na">–</td><td class="second">55.50</td><td class="best">58.00</td><td>42.80</td><td>46.70</td><td>44.50</td><td>40.10</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="bench-caption">PixelUMM is evaluated in <code>sparse_mode</code> with up to 96 sampled frames. Video-MME is evaluated without subtitles. Published models keep their original evaluation protocols.</p>
+    </section>
+
+    <section id="limitations" class="section limitations" aria-labelledby="limitations-title">
+      <div class="section-head">
+        <h2 id="limitations-title">Limitations</h2>
+      </div>
+      <p class="limitations-intro">PixelUMM has weaknesses. Generating directly in pixel space removes the VAE, but PixelUMM still shares the typical failure modes of latent video diffusion models.</p>
+      <ul class="limitations-list">
+        <li><strong>Many similar entities.</strong> When several animals or people overlap, their bodies can merge, split, or appear out of nowhere, so their number drifts over the clip.</li>
+        <li><strong>Hands and fine anatomy.</strong> Hands can have the wrong number of fingers, and small limbs can blur into each other.</li>
+        <li><strong>Physics and interactions.</strong> Motion can be physically implausible, rigid objects can bend or morph, and interactions between objects or characters may not have the expected effect.</li>
+      </ul>
+      <div id="limitations-gallery" class="gallery gallery-limitations"></div>
+    </section>
+  </main>
+
+  <dialog id="viewer" aria-labelledby="viewer-title">
+    <form method="dialog" class="viewer-close-form">
+      <button class="viewer-close" aria-label="Close">×</button>
+    </form>
+    <video id="viewer-video" controls loop muted playsinline></video>
+    <div class="viewer-text">
+      <h3 id="viewer-title"></h3>
+      <p id="viewer-meta" class="viewer-meta"></p>
+      <p id="viewer-note" class="viewer-note" hidden></p>
+      <p id="viewer-prompt" class="viewer-prompt"></p>
+    </div>
+  </dialog>
+</body>
+</html>

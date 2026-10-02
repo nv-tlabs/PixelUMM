@@ -1,0 +1,764 @@
+{
+  "assets": [
+    {
+      "path": "video/tea-time.mp4",
+      "bytes": 457100,
+      "sha256": "b2ea9c368d042453d8bdbcb892077c0871359468c181248eb97868fa5460156e"
+    },
+    {
+      "path": "poster/tea-time.jpg",
+      "bytes": 59139,
+      "sha256": "78754b05c62d63ae1f49e9407e34a7544c707f36c5b92e6fd1a0d8c83994701d"
+    },
+    {
+      "path": "video/redwood-suv.mp4",
+      "bytes": 1152666,
+      "sha256": "7c2b903dff2fec4c64d324a10cf411f099e8fa6061ff829da72fc807dd7d4e7e"
+    },
+    {
+      "path": "poster/redwood-suv.jpg",
+      "bytes": 83757,
+      "sha256": "b55389ab9dff277bc9606b869c4f6ffbf54bb09cc80d45508b8d2f686c9b0d96"
+    },
+    {
+      "path": "video/snow-train.mp4",
+      "bytes": 359198,
+      "sha256": "194bbc4e9c84e92571a373ac99a25dd1aceac85ca0b22a1129b73f97fc1eca76"
+    },
+    {
+      "path": "poster/snow-train.jpg",
+      "bytes": 43652,
+      "sha256": "ac31aa36ae83cd35b118351da40e15cc47348e1e14fa047eb945b0ab218e2fc3"
+    },
+    {
+      "path": "video/train-window-girl.mp4",
+      "bytes": 655963,
+      "sha256": "756b2eb3c9cae09bc7d856eb9ded72ee958102760209e871a0c8919557cca2d2"
+    },
+    {
+      "path": "poster/train-window-girl.jpg",
+      "bytes": 61718,
+      "sha256": "d177b5f7e94b5c4ad66c3ccfdfbb85aa26b38748c3c399ed3bf85e8aefb495a9"
+    },
+    {
+      "path": "video/data-whale.mp4",
+      "bytes": 607542,
+      "sha256": "dbd6297d674fe93675e2314f2bfa57eaf6bbe4349024ac1a0cbf515025c622ef"
+    },
+    {
+      "path": "poster/data-whale.jpg",
+      "bytes": 104094,
+      "sha256": "5bb722159a401b6ee3790a1161e8fe7a772015ab673ec0f5f792db3a65f64286"
+    },
+    {
+      "path": "video/beach-corgi.mp4",
+      "bytes": 731676,
+      "sha256": "f768cc9c75a568542dab568c30d4e7f59d9e623950a4e21620884e9521a22bcc"
+    },
+    {
+      "path": "poster/beach-corgi.jpg",
+      "bytes": 57909,
+      "sha256": "beeb773162aa9682c983de2b328389125b5c3b762f18e12de1af9b97c1ec37e6"
+    },
+    {
+      "path": "video/red-balloon.mp4",
+      "bytes": 892560,
+      "sha256": "e905f6dcdb42c2744b9a2b43080c2747fe43b9517f9da7289567624616d218a3"
+    },
+    {
+      "path": "poster/red-balloon.jpg",
+      "bytes": 43102,
+      "sha256": "5de1a3afd74fecc07c154f83bf9e2be4a17eebcc8ad4bdfbc9627ca8170a3e70"
+    },
+    {
+      "path": "video/blue-rose-dew.mp4",
+      "bytes": 355227,
+      "sha256": "7006c14bbb6465d53f7cc3c67346ca7e40e69012919945ac1aee4557e29069ae"
+    },
+    {
+      "path": "poster/blue-rose-dew.jpg",
+      "bytes": 55989,
+      "sha256": "b53ffa4f91446d768cf891a341ef643c93bb7178c08a6e2237a74ef7b6fb1a19"
+    },
+    {
+      "path": "video/upright-piano.mp4",
+      "bytes": 179981,
+      "sha256": "3f6a546ae26a9b8e088643b594cf93c905eacdd13239d29556cc9301358e4bcf"
+    },
+    {
+      "path": "poster/upright-piano.jpg",
+      "bytes": 33746,
+      "sha256": "e1de5a20b1b8958c0d4a5a49ff876a6219df0dffbc5b48ce0b3d412de9c7e99b"
+    },
+    {
+      "path": "video/tv-glow.mp4",
+      "bytes": 127965,
+      "sha256": "9781f6a3a5d181a5990720d76799c3ee24069a46f1fde3bec03b8fb48eff7c9f"
+    },
+    {
+      "path": "poster/tv-glow.jpg",
+      "bytes": 14751,
+      "sha256": "0d8d195dfeee3f09cfcaee2a78b6b5fd06de7eb625606a5e386907916bbcf2a7"
+    },
+    {
+      "path": "video/surfing-otter.mp4",
+      "bytes": 1021932,
+      "sha256": "7cbd7d82bfc5268f01cac31882d3303c4be19124281ab9bb11be4f5750b9fc62"
+    },
+    {
+      "path": "poster/surfing-otter.jpg",
+      "bytes": 42472,
+      "sha256": "e985b497a52d312e7b985d376f549f180290000eae9ff2a8e711345c1ed1836f"
+    },
+    {
+      "path": "video/warehouse-man.mp4",
+      "bytes": 309787,
+      "sha256": "9cdb40c57bfd0269c9d0cdb8bcbf0eba8411d6d1fa154daa94b8ff54e52777f3"
+    },
+    {
+      "path": "poster/warehouse-man.jpg",
+      "bytes": 38572,
+      "sha256": "c1dee62288a0950734c61a8879f1618ad673fe1c4940d67619f3609c8f6de2ea"
+    },
+    {
+      "path": "video/rainy-night-street.mp4",
+      "bytes": 827593,
+      "sha256": "0780a414f0c69158afc78780a0972c4cd8ecf94ae29675e389e8621f9fb25578"
+    },
+    {
+      "path": "poster/rainy-night-street.jpg",
+      "bytes": 66023,
+      "sha256": "7010321447ba40aafb01ca0e2e46a1fa1b98e0a0e3784ca46975d7236a7e38ae"
+    },
+    {
+      "path": "video/magnolias.mp4",
+      "bytes": 357077,
+      "sha256": "30232aeee4c73205dc17f980582544a7d9c649c3f0bf93c8699833e73f3fcb6c"
+    },
+    {
+      "path": "poster/magnolias.jpg",
+      "bytes": 68902,
+      "sha256": "55ebcbf0d1c20a43b4a4867b6396de57de9830e3839240a1e2fbb29ee1e6ae42"
+    },
+    {
+      "path": "video/stage-dancer.mp4",
+      "bytes": 262558,
+      "sha256": "899fb3b9738ca2f8a56e6b3c9ec535e5b6cd54641c3e1402fc2cfcfa504f58ac"
+    },
+    {
+      "path": "poster/stage-dancer.jpg",
+      "bytes": 30004,
+      "sha256": "ddea61e484252276ac784b322c6ffb3ef677883212ddb02c23ee5e0b4ead6858"
+    },
+    {
+      "path": "video/wolf-falls.mp4",
+      "bytes": 934414,
+      "sha256": "aca65a2597e35bd9205dc5f21bef90972b3c4e61c5e4df4eb8d4c34b99e5bf85"
+    },
+    {
+      "path": "poster/wolf-falls.jpg",
+      "bytes": 96516,
+      "sha256": "8a9225f1b77026f3a8072db8bdcefe4b9892a0be928bedd72eb8bb0ea19d473f"
+    },
+    {
+      "path": "video/pencil-plan.mp4",
+      "bytes": 216506,
+      "sha256": "eeb3a7eb5162336d31c7dd386a52fade1b9e620ab0853f8c889246abd72eb104"
+    },
+    {
+      "path": "poster/pencil-plan.jpg",
+      "bytes": 51131,
+      "sha256": "cf7e92bb161336a2feceff898f5249377feb2e33586cf3f4981fa4c5e587fbc3"
+    },
+    {
+      "path": "video/alley-tsunami.mp4",
+      "bytes": 1444226,
+      "sha256": "598eab7e35764a3cb0e079442e0586a6e2a657a928ed132dd5c3b9fdd905b968"
+    },
+    {
+      "path": "poster/alley-tsunami.jpg",
+      "bytes": 63137,
+      "sha256": "0ac2884203cfca7d739dea14452e3d60ae619f50015dca624ec27cf50455879d"
+    },
+    {
+      "path": "video/chrome-bull.mp4",
+      "bytes": 367165,
+      "sha256": "409a906f2b27d3550a359e1486b796c76b822115e5f5f7766f8f25e96ad0771d"
+    },
+    {
+      "path": "poster/chrome-bull.jpg",
+      "bytes": 65498,
+      "sha256": "9b8ed01adb9380eefa4f89b93f855e1dfe6336d622607827791c9689520f24e9"
+    },
+    {
+      "path": "video/step-printed-runner.mp4",
+      "bytes": 395483,
+      "sha256": "fd795d08457b4d4d773d2bfd9d4069f3f1d3ebc2f9a5abe67fd6c3ecf04d3072"
+    },
+    {
+      "path": "poster/step-printed-runner.jpg",
+      "bytes": 20529,
+      "sha256": "feb19ac8edbd538ccfd8f0c6441b8cca49964a8e36b2a392ee75fddcf9bed3bb"
+    },
+    {
+      "path": "video/art-gallery.mp4",
+      "bytes": 589103,
+      "sha256": "64bd119eb6c32ed7aea091099dc317a612b2fe104c0b4f8c16e4be18d9d432e5"
+    },
+    {
+      "path": "poster/art-gallery.jpg",
+      "bytes": 43727,
+      "sha256": "34b9c140457e910cbe5160e907a1d51c4e6339c9bded8685d241dcc433b4d761"
+    },
+    {
+      "path": "video/panda-guitar.mp4",
+      "bytes": 533248,
+      "sha256": "313c29360c10d67b4d41362868e6bcf8e8f1e5555d0a52ae54b79bfe3755c5fe"
+    },
+    {
+      "path": "poster/panda-guitar.jpg",
+      "bytes": 78111,
+      "sha256": "ce45c784e652c94f1ae5febd7483e1ec24fb0d98f1efef06a4f3910ddbbf0c04"
+    },
+    {
+      "path": "video/hidden-library.mp4",
+      "bytes": 583450,
+      "sha256": "7a3b0263046116a81819e81a01e153d451d6214a4526e71e9503cde1a124d2d5"
+    },
+    {
+      "path": "poster/hidden-library.jpg",
+      "bytes": 91303,
+      "sha256": "1103e17822fbd8ef925ee19ac112a73518d48bbc1a4c73deb5f7c8c45d3c26d6"
+    },
+    {
+      "path": "video/big-sur.mp4",
+      "bytes": 607760,
+      "sha256": "bd63374b7e2f3413284e8d9125cf876159378a299f161a8965ff8fd28b504feb"
+    },
+    {
+      "path": "poster/big-sur.jpg",
+      "bytes": 87710,
+      "sha256": "6d36dbf972c89b67d54fa9fe1290d27d144b017bcd450db8e5489af169e8f226"
+    },
+    {
+      "path": "video/dolphin-ballet.mp4",
+      "bytes": 358838,
+      "sha256": "8dd4987a4fe091915bcc9f6470417c9a5ee25b2bf73dbb68d44d493685f51433"
+    },
+    {
+      "path": "poster/dolphin-ballet.jpg",
+      "bytes": 73744,
+      "sha256": "b5f8dea9d5e3b663e588c31af682e299c174b52201baeef8c5381eef9e427b9a"
+    },
+    {
+      "path": "video/snowy-tokyo-anime.mp4",
+      "bytes": 1273540,
+      "sha256": "e05cc6e6227b13c9ee68f6cbb3eacb7da26027c230f5f0695af3551533946a6a"
+    },
+    {
+      "path": "poster/snowy-tokyo-anime.jpg",
+      "bytes": 62833,
+      "sha256": "03921c65ecc0aa08fa4e7eb2b2217405e5ad72a1d1d7c44a140362402064e781"
+    },
+    {
+      "path": "video/ant-nest.mp4",
+      "bytes": 1165990,
+      "sha256": "061799cd681230bcdc7d3df8bc64e4e239e4fc181e240c5a6390fd71f5663dd1"
+    },
+    {
+      "path": "poster/ant-nest.jpg",
+      "bytes": 106978,
+      "sha256": "8f797cd0f70fec926697314875702509c2c67e68df9f61a82c75d991f3634631"
+    },
+    {
+      "path": "video/chick-farm.mp4",
+      "bytes": 938537,
+      "sha256": "e85c025749f6090b19a02956dbfcf51019237d5db8fffe6ef3e5caf9a0638bcb"
+    },
+    {
+      "path": "poster/chick-farm.jpg",
+      "bytes": 94118,
+      "sha256": "92c7677e8c06b180eeb5c6d41f1879985225214fdf6cb6900725e42c26838b6e"
+    },
+    {
+      "path": "video/neon-tokyo.mp4",
+      "bytes": 715545,
+      "sha256": "7a4e66f5872b0d4fad15ebd98e2a219424a7de691c1b6a0e0977dbaff4b29901"
+    },
+    {
+      "path": "poster/neon-tokyo.jpg",
+      "bytes": 71981,
+      "sha256": "baf2ba1182bddaa382e00c35031a4984b1c2c691aed3cf2a3ca17167ba16ebfa"
+    },
+    {
+      "path": "video/seasons-bicycle.mp4",
+      "bytes": 1603331,
+      "sha256": "bda694a8346a42c1e23f65faed5c1ae6f2be06b0787e6f9454af89c53fe856bc"
+    },
+    {
+      "path": "poster/seasons-bicycle.jpg",
+      "bytes": 111230,
+      "sha256": "bcd2ae1a6172285821db17715aace48a9b1d782cd286da682e77763a7e77c821"
+    },
+    {
+      "path": "video/flame-wisp.mp4",
+      "bytes": 676477,
+      "sha256": "777b1b0ad1136c770f750be93d6525d6a832c65370ea99ea653ac4b3ce7938b9"
+    },
+    {
+      "path": "poster/flame-wisp.jpg",
+      "bytes": 65056,
+      "sha256": "d41288d11c9510845aaae4ab32d426d877bd405cab433d487035557df42a68fe"
+    },
+    {
+      "path": "video/train-reflection.mp4",
+      "bytes": 503249,
+      "sha256": "63d93aee6381ea172cbb3b49626e2685338b775f9503c4d5808e21f8687e6eda"
+    },
+    {
+      "path": "poster/train-reflection.jpg",
+      "bytes": 56919,
+      "sha256": "f20f9a40bd20fdc074acbd828784d258ecfbe8ed28334eb6a3e22586adbc2df7"
+    },
+    {
+      "path": "video/gym-bench.mp4",
+      "bytes": 273328,
+      "sha256": "24bb782ecd414818e47a6a8f48c9a527c355848b18b83c50d1f8de6e28aa3a7a"
+    },
+    {
+      "path": "poster/gym-bench.jpg",
+      "bytes": 46500,
+      "sha256": "b56f309f12d0fb0a6c86bbf7550008315488cef9154d0be91256004667638ffb"
+    },
+    {
+      "path": "video/neon-robot.mp4",
+      "bytes": 537381,
+      "sha256": "057609b4d5e70ce3f3cdbeebfdb371aa94aaa9616a9e7284c57cc34c2cddd4df"
+    },
+    {
+      "path": "poster/neon-robot.jpg",
+      "bytes": 82660,
+      "sha256": "8e8f383ee8577d397cb6ac9e546a3061ba9ca1d2598cb63a8e95297dcad30c00"
+    },
+    {
+      "path": "video/mushrooms.mp4",
+      "bytes": 294085,
+      "sha256": "2db4427138f25e5ce429811eedb8ff1c44b2fc5a3c0c55f588230941626f3635"
+    },
+    {
+      "path": "poster/mushrooms.jpg",
+      "bytes": 60638,
+      "sha256": "4a9ce734548b82757ea7dc57523d4bc01b6bdc35dc50606683a52bc3bf521881"
+    },
+    {
+      "path": "video/chopping-onions.mp4",
+      "bytes": 343636,
+      "sha256": "90a883d3cbd9dbb186af56fc37ec5f7347a882ffe60bf0bc8d92975932c5eca9"
+    },
+    {
+      "path": "poster/chopping-onions.jpg",
+      "bytes": 44359,
+      "sha256": "ebe0a5d664f4e5a7c0eab906197bcc26618d2b30a39d3a212c9925057a4e4c39"
+    },
+    {
+      "path": "video/birthday-cake.mp4",
+      "bytes": 374161,
+      "sha256": "0d5125c79c2a0ff67dffd68365e3fa249fbae1abe2f5b9baa2be5428190ed469"
+    },
+    {
+      "path": "poster/birthday-cake.jpg",
+      "bytes": 62657,
+      "sha256": "ed725ca335a0bc0a95900189ced953c39440140761759135bad3cd3855dade75"
+    },
+    {
+      "path": "video/latte-art.mp4",
+      "bytes": 301699,
+      "sha256": "4f3b5e16d5261e0abd0a0408f35b2ab1985ab88b66132be58615282e8b86f2e9"
+    },
+    {
+      "path": "poster/latte-art.jpg",
+      "bytes": 44111,
+      "sha256": "35a7d1a007e1a8b0264c1bb808db1a138569a10b47e41a4a5a64661d25d19aa2"
+    },
+    {
+      "path": "video/golden-retriever.mp4",
+      "bytes": 448912,
+      "sha256": "f18b2c2bcd031efcbfc4226447d462f22f2508a6236a9ac1c90890e1a17a4161"
+    },
+    {
+      "path": "poster/golden-retriever.jpg",
+      "bytes": 48910,
+      "sha256": "2a54b7d8249b1bc85dad561adacdc89725c351df63c76858984cd65b3b7430ad"
+    },
+    {
+      "path": "video/chameleon.mp4",
+      "bytes": 493648,
+      "sha256": "192031cabc9d59df1e9e43630507eb674b498774c3bdf216f0b2ae90a41fbc79"
+    },
+    {
+      "path": "poster/chameleon.jpg",
+      "bytes": 97372,
+      "sha256": "cd63d93305c2b2b030f070ab5838a49af0a40b1686282eb01ea6330c2af7820b"
+    },
+    {
+      "path": "video/cobblestone-village.mp4",
+      "bytes": 1187570,
+      "sha256": "b3773f6b60685017548a435d5164c34745014b43570898b2e6b7fe4ee6b54840"
+    },
+    {
+      "path": "poster/cobblestone-village.jpg",
+      "bytes": 103048,
+      "sha256": "f50c0f2d0ae6fd9c266772023773f65c57bba13aad6ce27f422fa42913c8aab8"
+    },
+    {
+      "path": "video/cheeseburger-bite.mp4",
+      "bytes": 477207,
+      "sha256": "f81b0cc4bd0d24e71a0441e90cd789cca9098d25661490f6b09c03025c57e915"
+    },
+    {
+      "path": "poster/cheeseburger-bite.jpg",
+      "bytes": 57282,
+      "sha256": "65d4b3801a29f47d97e5c981fb80854babc230ab929167a14ae53416ec6a8644"
+    },
+    {
+      "path": "video/watercolor-market.mp4",
+      "bytes": 975925,
+      "sha256": "650af1e70259b07f8966d4533d19f34b0714c5cf82406336479ee022adc44260"
+    },
+    {
+      "path": "poster/watercolor-market.jpg",
+      "bytes": 83431,
+      "sha256": "6ef37f30387208d187c545c565884ccacefe2c22cf5ea892fc39fb1abdc0a2f7"
+    },
+    {
+      "path": "video/locomotive-cab.mp4",
+      "bytes": 912957,
+      "sha256": "b947e0051b41200c1b8e919385a295ce34bd9cc4641f492ad2192e29e3ec39cc"
+    },
+    {
+      "path": "poster/locomotive-cab.jpg",
+      "bytes": 79928,
+      "sha256": "3085ccc43d39f56062b9bb16cc9e4ea99c42a712937e0b2d6e28fb105790a467"
+    },
+    {
+      "path": "video/burano-dalmatian.mp4",
+      "bytes": 531273,
+      "sha256": "8f2183326d21ceaa492accbc6d0307c7e1c62fe583d2ee060fae226e95c7fbb5"
+    },
+    {
+      "path": "poster/burano-dalmatian.jpg",
+      "bytes": 76206,
+      "sha256": "59f32d64c4b35583310fd3c16a4dc91639f0c430deeb5ddc858c63fc558e4524"
+    },
+    {
+      "path": "video/eye-marrakech.mp4",
+      "bytes": 317251,
+      "sha256": "dbf188ba4b93b05046c4f6510e16d9b2957e6ec309333aa1dfcd20adffc7fe26"
+    },
+    {
+      "path": "poster/eye-marrakech.jpg",
+      "bytes": 20054,
+      "sha256": "d7fa17266620aee8e701ea2aa80713995c565830171e8a9b7b6940d46e80ded7"
+    },
+    {
+      "path": "video/dance-break.mp4",
+      "bytes": 397128,
+      "sha256": "2b37a8a72926f241291df2b02829a1ce68129529424dbf2b672de572892e5fc0"
+    },
+    {
+      "path": "poster/dance-break.jpg",
+      "bytes": 27747,
+      "sha256": "ee7b0b7923282b55eafa2e3b97c33ea5780a68933d2123dc7ceb6c4c80102630"
+    },
+    {
+      "path": "video/rio-astronaut.mp4",
+      "bytes": 570730,
+      "sha256": "1fc6f152bd3212d7786b957ef7a0b5d2b5f91d773cbb0b46f684d3f5d898dff3"
+    },
+    {
+      "path": "poster/rio-astronaut.jpg",
+      "bytes": 44119,
+      "sha256": "0b1d3fc72ae267bf8a319604110cad34f35a492e3ca5d486e93ccfeba38781ca"
+    },
+    {
+      "path": "video/coffee-volcano.mp4",
+      "bytes": 284280,
+      "sha256": "dfdb887ed8f2d54d202a0d93409669792642edce56da3fcd4e7ab7ca3e710c47"
+    },
+    {
+      "path": "poster/coffee-volcano.jpg",
+      "bytes": 38620,
+      "sha256": "9b4e29825741ca306bf7c41cafd3489a45814942ef58bb16092deea9611258dd"
+    },
+    {
+      "path": "video/underwater-suburb.mp4",
+      "bytes": 1061737,
+      "sha256": "e717a6f7ac8220f4b0961abe56706dfe843a26d165013c0b3b7aec5e9a9a0171"
+    },
+    {
+      "path": "poster/underwater-suburb.jpg",
+      "bytes": 63913,
+      "sha256": "a7c8f9ea22b2edc89804d15f9259cb0091d8bb8c24e969b5d66836abd5f19dfb"
+    },
+    {
+      "path": "video/fox-at-dawn.mp4",
+      "bytes": 745196,
+      "sha256": "cf30db25df5f7943ae6dbd2d49df287a472dfd272a662f96d70c3154e81aa229"
+    },
+    {
+      "path": "poster/fox-at-dawn.jpg",
+      "bytes": 104503,
+      "sha256": "d8dda0226e437be1c752f09553bf55cc577f07c932c5637045bc99e83b62cee3"
+    },
+    {
+      "path": "video/lr-portrait.mp4",
+      "bytes": 43179,
+      "sha256": "ddb372c9c72dd90ef800005f7e301637f5c0fa6d86f8b4037fa266b9ff5fd1bf"
+    },
+    {
+      "path": "poster/lr-portrait.jpg",
+      "bytes": 5464,
+      "sha256": "a7b4d531b9eec686e5eb54e2c215526210627e01098085d38bd7ead841b4ed7f"
+    },
+    {
+      "path": "video/lr-cloak.mp4",
+      "bytes": 108081,
+      "sha256": "0070ce6ce63f2a6f328426816ccb1a20cc0447b1eb68736a9128fec28dcbc4d5"
+    },
+    {
+      "path": "poster/lr-cloak.jpg",
+      "bytes": 15164,
+      "sha256": "38ff92e9607b7bb40279d363dce54628cdd1b79d3673d7d739fe8ac25ed2f6f7"
+    },
+    {
+      "path": "video/lr-candle-monster.mp4",
+      "bytes": 43356,
+      "sha256": "c44b7b2a121cdb019442ffc2e0cba920adfa7755aad28ee61a1788babdfb2a59"
+    },
+    {
+      "path": "poster/lr-candle-monster.jpg",
+      "bytes": 7935,
+      "sha256": "7f1dc9e58c75961598996b408f335062695b7738e7d7ab8ae28ffce2a22dd901"
+    },
+    {
+      "path": "video/lr-autumn-forest.mp4",
+      "bytes": 168594,
+      "sha256": "bfdb92a3acd407b0e1d3952c41e1a04f9968198dad6a15db726f8cca65b89acc"
+    },
+    {
+      "path": "poster/lr-autumn-forest.jpg",
+      "bytes": 24870,
+      "sha256": "008ab4e9cd928ea87bc59dd705e8402a6f107713eb6c1811a142a99b395909ed"
+    },
+    {
+      "path": "video/lr-warehouse-bloom.mp4",
+      "bytes": 133234,
+      "sha256": "d42b520a6382e03328a77febc86c0e6213cbff1c23228475cc636f0f45c475ba"
+    },
+    {
+      "path": "poster/lr-warehouse-bloom.jpg",
+      "bytes": 16335,
+      "sha256": "0140330dafa367cb17a27ce78dd59d373f20c19e014d94ae405a46ecce199349"
+    },
+    {
+      "path": "video/lr-rabbit-news.mp4",
+      "bytes": 63064,
+      "sha256": "766f98b289c51f50ed0076fc165d35b51e2887b182d6ed1104a0fb64e2eafadb"
+    },
+    {
+      "path": "poster/lr-rabbit-news.jpg",
+      "bytes": 19343,
+      "sha256": "35c8f343d58e0e429bd1103047c6fa5403eef28adf3fb760cc8e3c5702395a0f"
+    },
+    {
+      "path": "video/lr-sunflower.mp4",
+      "bytes": 88020,
+      "sha256": "5a86fe18c762e59d23b2fc28f78ecfa0cb8db79ebfa505471b6dd06ce719dc8a"
+    },
+    {
+      "path": "poster/lr-sunflower.jpg",
+      "bytes": 17936,
+      "sha256": "6b17033819cc31510ac197e52c5fed7786eb1557a1698fd9b592c5489a9cea40"
+    },
+    {
+      "path": "video/lr-blue-parrot.mp4",
+      "bytes": 157133,
+      "sha256": "ba74158ea9acb007d98c707adbca035120c6d1fe834df54b4a9f04660c701d8e"
+    },
+    {
+      "path": "poster/lr-blue-parrot.jpg",
+      "bytes": 18667,
+      "sha256": "64009d84af79c9a88df558127ed1879f2a1d4f7065012a4a80fded189980874b"
+    },
+    {
+      "path": "video/lr-flower-bed.mp4",
+      "bytes": 97646,
+      "sha256": "f3f2480f3dddb7e426e1141c14f8d8ae87adfd325151fd7628883aa5902902fc"
+    },
+    {
+      "path": "poster/lr-flower-bed.jpg",
+      "bytes": 18963,
+      "sha256": "c4d24c6f2bfee078a015225b79e7084b3d32c81ce1ec6aca0dd01a4b0274ca22"
+    },
+    {
+      "path": "video/lr-rainy-drive.mp4",
+      "bytes": 89020,
+      "sha256": "4d332bde00ff3e4ecc35947f7313b46b2bf14b959237a82a869302965de0b779"
+    },
+    {
+      "path": "poster/lr-rainy-drive.jpg",
+      "bytes": 10790,
+      "sha256": "12ff810110df4861997a809afb59c27964d01f294d67997c55515432e3b0d9b1"
+    },
+    {
+      "path": "video/lr-octopus-crab.mp4",
+      "bytes": 134607,
+      "sha256": "bc8567a20b6ebc4a6ef31a8bbbe639329bb4bda8fe29a94ad73fd02e1d17cddb"
+    },
+    {
+      "path": "poster/lr-octopus-crab.jpg",
+      "bytes": 18080,
+      "sha256": "00f14b54926816fbc314619eea9da5889bf51f7bae47b0fb21addb9e989398cb"
+    },
+    {
+      "path": "video/lr-plastic-chair.mp4",
+      "bytes": 84355,
+      "sha256": "95f03445a10d4fafde168ec78fbd43d518def40162a32270698c44afc9a6fd64"
+    },
+    {
+      "path": "poster/lr-plastic-chair.jpg",
+      "bytes": 11763,
+      "sha256": "a4ce32079da6bf8ed019609b6e45c26ba75fcd497f2daae64a7bcdb60f592e47"
+    },
+    {
+      "path": "video/wolf-pups.mp4",
+      "bytes": 1447381,
+      "sha256": "6387137af8a13e2fd6666e5a673346b67bd0e98ed58d031801b03a25f3a7e89b"
+    },
+    {
+      "path": "poster/wolf-pups.jpg",
+      "bytes": 82218,
+      "sha256": "cb9c3a738af21404bf026dfcc22c3e1d68508647dea95224079b34bee5de510d"
+    },
+    {
+      "path": "video/snow-puppies.mp4",
+      "bytes": 447581,
+      "sha256": "bfa72584cbb12a3d41bdb1b487001b3cd941cd76c734039b9083514bf36bf9aa"
+    },
+    {
+      "path": "poster/snow-puppies.jpg",
+      "bytes": 40267,
+      "sha256": "9332e00bc45ab0b7f463225b6f9a8bc4eef485f1adcafc1bc2702b19251144e4"
+    },
+    {
+      "path": "index.html",
+      "bytes": 38752,
+      "sha256": "4d8cc7887ee42dadc9cdb8dca9282b2ece08b485968a390500119442e7607816"
+    },
+    {
+      "path": "app.js",
+      "bytes": 4358,
+      "sha256": "baf55215ca3056516b6f4014b6449e1c4cb4771ca6cfcec4bc4d0ed6323909f0"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 14024,
+      "sha256": "0da831a0059727159dbdcc9d73e8eb2e308ff6ab3b06954b52b3fd8b95ba118d"
+    },
+    {
+      "path": "examples.json",
+      "bytes": 65331,
+      "sha256": "bc2f688fa5bad30f648517c1193f92c2781b6cf86eda58449d1f834bb6f8c356"
+    },
+    {
+      "path": "media/overview.mp4",
+      "bytes": 9894826,
+      "sha256": "e8efde9f942e47b352103aa7684367996b538d13037e444307aaa400bb139df1"
+    },
+    {
+      "path": "media/overview.jpg",
+      "bytes": 196334,
+      "sha256": "ec249b6512ae477b6b98065460ccbb8f0ee784baa5d24c64c90461aabec03c5b"
+    },
+    {
+      "path": "findings/f1-image-patch-size-loss.webp",
+      "bytes": 86918,
+      "sha256": "16dc47422723378568914aee5a225182dadf88ff873fdfec8c0260db5243ae30"
+    },
+    {
+      "path": "findings/f1-image-patch-size-samples.webp",
+      "bytes": 201882,
+      "sha256": "8bdbc5b6426743fdb267e7750c5bb27a277ab60114218166dfad284c4a9ecaa1"
+    },
+    {
+      "path": "findings/f2-video-patch-size-loss.webp",
+      "bytes": 275252,
+      "sha256": "a72f1e6aad34f1dfa366d9919b461efc7f1038c7af6107d6ff192789e18ed16c"
+    },
+    {
+      "path": "findings/f2-video-patch-size-samples.webp",
+      "bytes": 234020,
+      "sha256": "af93c7ef27aafa388fb2a4bb1f89b90867f866b1cf166ac5e95af0110fc0052d"
+    },
+    {
+      "path": "findings/f3-boundary-probe.webp",
+      "bytes": 94796,
+      "sha256": "01dac2f5f58542710dc7b74c950a645187988790dc0d332fa9c6635312c005d9"
+    },
+    {
+      "path": "findings/f3-decoder-architectures.webp",
+      "bytes": 355794,
+      "sha256": "0daca4a5189b5df7b7178b4a8077877950c90f0f067eab29ae6ecbc39fe8f84f"
+    },
+    {
+      "path": "findings/f3-decoder-heads-qualitative.webp",
+      "bytes": 1657518,
+      "sha256": "543d21677bb6023b7cfe123b83ce7bb021b2d0ca0e884e4330d9c592d424fd30"
+    },
+    {
+      "path": "findings/f3-decoder-loss.webp",
+      "bytes": 229494,
+      "sha256": "87d492595e1f177cf12bacf714f2d9d007a7205178815b25961c688583941ee5"
+    },
+    {
+      "path": "findings/f3-linear-head-artifacts.webp",
+      "bytes": 431080,
+      "sha256": "7be1a1bf7ba5d645c6936120f862d5db97c00eec3018bf6c1f2a0926a3c869da"
+    },
+    {
+      "path": "findings/f4-pixel-vs-vae.webp",
+      "bytes": 113870,
+      "sha256": "090141f96bed92c70eb65fc73ebc6382e2ca0b79a9ce13d9b2a6b5e6223b2ccd"
+    },
+    {
+      "path": "findings/f5-model-size.webp",
+      "bytes": 95594,
+      "sha256": "0ed539fd82d30db616b0f7a7f9d847c9d43ac3344f0a602b3b4165db2331e2e8"
+    },
+    {
+      "path": "findings/f6-compute-scaling.webp",
+      "bytes": 107576,
+      "sha256": "5c6af13bf7b5514fba55cd0e2d944b83ee4046b1ffccbf2803e2c667393bf33f"
+    },
+    {
+      "path": "findings/f7-context-conditioning.webp",
+      "bytes": 106700,
+      "sha256": "f4b41128a3bc7e61ec117128480e20b83d54be49b481aebcaf0ced7bd0108df1"
+    },
+    {
+      "path": "findings/f7-image-to-video.webp",
+      "bytes": 80710,
+      "sha256": "2afd22da3ae1ce4b1bd2ee174d19202147bbf2330e45b67ef47ec72d8682837b"
+    },
+    {
+      "path": "findings/f7-video-edit.webp",
+      "bytes": 97392,
+      "sha256": "3be5e1a784e9b067bfdd5dc15dd640c05b9f929df4a7d9341e2f7fdd41e1c917"
+    },
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}
