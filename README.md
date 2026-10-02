@@ -21,6 +21,8 @@
   &nbsp;
   <a href="https://arxiv.org/abs/2609.38597"><img src="https://img.shields.io/badge/arXiv-2609.38597-b31b1b?logo=arxiv" alt="arXiv:2609.38597"></a>
   &nbsp;
+  <a href="https://huggingface.co/papers/2609.38597"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Paper-orange" alt="Hugging Face Paper"></a>
+  &nbsp;
   <a href="https://huggingface.co/nvidia/PixelUMM"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-orange" alt="Hugging Face Model"></a>
 </p>
 
